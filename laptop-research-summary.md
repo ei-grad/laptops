@@ -135,10 +135,10 @@
 
 | Model | Weight | Reason |
 |-------|--------|--------|
-| ROG Flow Z13 | 1.2 kg | Overheating investigation, inconsistent thermals |
-| Dell Pro 14 Plus | 1.58 kg | Throttles HX 370 to 25W — CB R23 only 12,684 |
-| System76 Darter Pro | 1.6 kg | Hot, noisy during compiles |
-| ThinkPad T14/T14s Gen 7 AMD as HX replacements | 1.09-1.40 kg | They top out at Ryzen AI 7 PRO 450; use P14s Gen 7 for HX PRO 470 |
+| ROG Flow Z13 | 1.2 kg | Overheating investigation, inconsistent thermals ([review notes](reviews/asus-rog-flow-z13.md)) |
+| Dell Pro 14 Plus | 1.58 kg | Throttles HX 370 to 25W — CB R23 only 12,684 ([NotebookCheck review](https://www.notebookcheck.net/Finally-embracing-AMD-for-the-pro-series-Dell-Pro-14-Plus-PB14255-laptop-review.1179867.0.html)) |
+| System76 Darter Pro | 1.6 kg | Hot, noisy during compiles ([review notes](reviews/system76-darter-pro.md)) |
+| ThinkPad T14/T14s Gen 7 AMD as HX replacements | 1.09-1.40 kg | They top out at Ryzen AI 7 PRO 450; use P14s Gen 7 for HX PRO 470 ([T14](reviews/lenovo-thinkpad-t14-amd.md), [T14s](reviews/lenovo-thinkpad-t14s.md), [P14s](reviews/lenovo-thinkpad-p14s-amd.md)) |
 
 ## Intel Options (May 2026 Update)
 
@@ -168,9 +168,9 @@ See [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026
 
 | Model | Reason |
 |-------|--------|
-| ThinkPad T14 Gen 6 Intel (Lunar Lake) | Only 8C/8T, 37W max TDP, 400MHz frequency bug on "balanced" profile |
-| Arrow Lake-H ultrabooks | Most are >2 kg; thin ones (Zenbook 14) sustain only 24W |
-| Any Lunar Lake for compilation | Efficiency platform, not for sustained workloads |
+| ThinkPad T14 Gen 6 Intel (Lunar Lake) | Only 8C/8T, 37W max TDP, 400MHz frequency bug on "balanced" profile ([Intel overview](overviews/intel-qualcomm-linux-2026.md)) |
+| Arrow Lake-H ultrabooks | Most are >2 kg; thin ones (Zenbook 14) sustain only 24W ([Arrow Lake notes](overviews/intel-qualcomm-linux-2026.md)) |
+| Any Lunar Lake for compilation | Efficiency platform, not for sustained workloads ([Lunar Lake assessment](overviews/intel-qualcomm-linux-2026.md)) |
 
 ## Qualcomm Status (May 2026)
 
@@ -185,14 +185,14 @@ See [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026
 
 | Model | Reason |
 |-------|--------|
-| ASUS Zenbook 14 AMD | Throttles from 50W to 28W under sustained load |
-| LG Gram 14 | "Worst thermal throttling for P-series" |
-| Framework 16 | Too heavy (2+ kg), CPU hits 100C |
-| Xiaomi/Huawei | Intel DPTF broken on Linux (up to 50% perf loss) |
-| ThinkPad P14s AMD (Gen 5 and earlier) | "Unacceptable noise" — Gen 6 reconsidered, see comparison table |
-| ROG Flow Z13 | Overheating investigation, inconsistent thermals |
-| **All Snapdragon X laptops** | **Linux support immature, Tiger Lake-level perf, no KVM** |
-| **Intel Lunar Lake (for compilation)** | **8C/8T max, 37W TDP, 400MHz bug** |
+| ASUS Zenbook 14 AMD | Throttles from 50W to 28W under sustained load ([excluded-model notes](overviews/excluded-models.md)) |
+| LG Gram 14 | "Worst thermal throttling for P-series" ([excluded-model notes](overviews/excluded-models.md)) |
+| Framework 16 | Too heavy (2+ kg), CPU hits 100C ([NotebookCheck specs](https://www.notebookcheck.com/Framework-Laptop-16.814495.0.html), [user thermal report](https://www.reddit.com/r/framework/comments/1pti8c0/framework_16_7840hs_owners_what_are_your/)) |
+| Xiaomi/Huawei | Intel DPTF broken on Linux (up to 50% perf loss) ([Intel overview](overviews/intel-qualcomm-linux-2026.md), [excluded-model notes](overviews/excluded-models.md)) |
+| ThinkPad P14s AMD (Gen 5 and earlier) | "Unacceptable noise" — Gen 6 reconsidered, see comparison table ([excluded-model notes](overviews/excluded-models.md)) |
+| ROG Flow Z13 | Overheating investigation, inconsistent thermals ([review notes](reviews/asus-rog-flow-z13.md)) |
+| **All Snapdragon X laptops** | **Linux support immature, Tiger Lake-level perf, no KVM** ([Qualcomm overview](overviews/intel-qualcomm-linux-2026.md)) |
+| **Intel Lunar Lake (for compilation)** | **8C/8T max, 37W TDP, 400MHz bug** ([Lunar Lake overview](overviews/intel-qualcomm-linux-2026.md)) |
 
 ## CPU Comparison: 8840HS vs HX 370
 
