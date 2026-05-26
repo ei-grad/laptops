@@ -39,7 +39,7 @@ LPCAMM2 gives soldered-class bandwidth with upgradeable form factor. Trade-off: 
 | **Dell Pro Precision 5 16S** | ~1.8 kg | Intel PTL or AMD | 64 GB @ 8533 | 16" variant |
 | **ThinkBook 14+** (China only) | ~1.5 kg | Intel Panther Lake | 32 GB @ 8533 | First consumer LPCAMM2 |
 
-### NOT LPCAMM2 (common misconceptions)
+### Confirmed Not LPCAMM2
 
 - ThinkPad T14s Gen 7 — soldered LPDDR5X
 - ThinkPad X1 Carbon Gen 14 — soldered
