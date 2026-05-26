@@ -4,9 +4,10 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 
 ## Key Criteria
 
-- Weight: ≤2.0 kg
-- RAM: 32 GB minimum (upgradeable preferred)
-- Sustained multi-core: no throttling after heat-soak
+- Size: ≤14" (max 15")
+- Weight: ≤1.7 kg (max 2.0 kg)
+- RAM: 32 GB minimum
+- Sustained clocks: ≥2.8 GHz multi-core, no throttling after heat-soak
 - Noise: <45 dB(A) under load
 - Linux: working out of box or with minor workarounds
 
