@@ -1,6 +1,6 @@
 ---
-model: Framework 13 Pro (2026)
-slug: framework-13-pro-2026
+model: Framework 13 Pro
+slug: framework-13-pro
 manufacturer: Framework
 status: announced
 form_factor: clamshell

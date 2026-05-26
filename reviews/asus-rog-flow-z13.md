@@ -1,6 +1,6 @@
 ---
 model: ASUS ROG Flow Z13
-slug: asus-rog-flow-z13-2025
+slug: asus-rog-flow-z13
 manufacturer: ASUS
 status: not_recommended
 form_factor: tablet
