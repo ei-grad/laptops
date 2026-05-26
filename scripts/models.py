@@ -2,10 +2,14 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
-class CPU(BaseModel):
+class StrictModel(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+
+class CPU(StrictModel):
     name: str
     cores: int
     threads: int
@@ -13,19 +17,19 @@ class CPU(BaseModel):
     boost_ghz: float | None = None
 
 
-class GPU(BaseModel):
+class GPU(StrictModel):
     name: str
     type: Literal["integrated", "discrete"]
     compute_units: int | None = None
 
 
-class PowerLimits(BaseModel):
+class PowerLimits(StrictModel):
     pl1_w: float
     pl2_w: float
     battery_w: float | None = None
 
 
-class Benchmarks(BaseModel):
+class Benchmarks(StrictModel):
     cinebench_r23_multi: int | None = None
     cinebench_r23_multi_sustained: int | None = None
     cinebench_r23_single: int | None = None
@@ -36,7 +40,7 @@ class Benchmarks(BaseModel):
     geekbench6_single: int | None = None
 
 
-class Variant(BaseModel):
+class Variant(StrictModel):
     year: int
     sku: str | None = None
     cpu: CPU
@@ -49,16 +53,18 @@ class Variant(BaseModel):
     benchmarks: Benchmarks = Benchmarks()
 
 
-class Display(BaseModel):
+class Display(StrictModel):
     size_in: float
     resolution: str | None = None
     panel: str | None = None
     refresh_hz: int | None = None
     touch: bool = False
     aspect_ratio: str | None = None
+    brightness_nits: int | None = None
+    contrast: int | None = None
 
 
-class NoiseLevel(BaseModel):
+class NoiseLevel(StrictModel):
     """Fan noise at different power profiles.
 
     idle_dba: fans off / desktop idle (often ≈ ambient)
@@ -75,7 +81,7 @@ class NoiseLevel(BaseModel):
     max_dba: float | None = None
 
 
-class LinuxCompat(BaseModel):
+class LinuxCompat(StrictModel):
     """Linux compatibility assessment.
 
     Status levels:
@@ -93,7 +99,7 @@ class LinuxCompat(BaseModel):
     issues: list[str] = []
 
 
-class Laptop(BaseModel):
+class Laptop(StrictModel):
     model: str
     slug: str
     manufacturer: str
