@@ -94,7 +94,7 @@ sources:
 
 | Spec | Intel Variant | AMD Variant |
 |------|---------------|-------------|
-| CPU | Core Ultra 5 325 / X7 358H / X9 | Ryzen AI 7 350 / AI 9 HX 370 |
+| CPU | Core Ultra 5 325 / X7 358H / X9 388H | Ryzen AI 7 350 / AI 9 HX 370 |
 | Architecture | Panther Lake (Intel 18A) | Strix Point (Zen 5 + Zen 5C) |
 | RAM Type | **LPCAMM2** LPDDR5X-7467 | DDR5-5600 **SO-DIMM** |
 | RAM Max | 64 GB | 64 GB |
