@@ -42,6 +42,44 @@ When adding or updating a review:
 - Track thermal/noise data at different power profiles
 - Always include YAML frontmatter in review files (see existing reviews for format)
 
+## Consistency Rules
+
+When modifying any data, ensure it stays consistent across all files that reference it:
+
+### Single source of truth
+- **Per-model specs and benchmarks** → `reviews/<slug>.md` frontmatter (authoritative)
+- **Structured data** → `laptops.jsonl` (generated, never edit by hand)
+- **Summary tables and decision matrix** → `laptop-research-summary.md`
+- **README top picks** → `README.md`
+- **CPU benchmark table** → `cpu-comparison.md`
+
+### After every data change
+1. Update the review file frontmatter first (source of truth)
+2. Run `uv run python -m scripts.extract` — must pass with no errors
+3. Update `laptop-research-summary.md` tables if the change affects comparison data or recommendations
+4. Update `README.md` top picks if recommendations change
+5. Update `cpu-comparison.md` if new CPU data is added
+6. Update `CHANGELOG.md`
+7. Commit updated `.md` files and `laptops.jsonl` together
+
+### File organization
+- `reviews/` — one file per model line, NOT per generation. Generations go as `variants` in frontmatter. Example: ThinkPad T14 Gen 5/6/7 → single `lenovo-thinkpad-t14-amd.md`
+- `overviews/` — thematic articles (platform comparisons, technology guides, excluded models). No `model:` in frontmatter
+- No years or generation numbers in filenames — use slug based on model line name
+- Framework 13 (old) and Framework 13 Pro are separate products → separate files
+
+### Data accuracy
+- `power.pl1_w` / `pl2_w` must be actual measured sustained/burst values from reviews, NOT cTDP spec ranges from AMD/Intel datasheets
+- If sustained power is not yet reviewed, use conservative estimates and note "est." in body text
+- Benchmark scores must cite the specific review source — same CPU in different laptops gives different scores
+- RAM type matters: LPCAMM2 is not SO-DIMM. Always specify per-variant, especially when Intel/AMD variants differ (e.g. Framework 13 Pro)
+- Prices: specify currency. `price_usd` in frontmatter is USD; note EUR/other in body text
+
+### When adding new models
+- Search for existing file for the same model line before creating a new one — add as a variant
+- Status `announced` for unreviewed models; change to `available`/`recommended` when sustained power data is confirmed by independent review
+- Don't claim sustained power numbers without a review source — laptop thermal design varies wildly for the same CPU
+
 ## Changelog
 Maintain `CHANGELOG.md` in the project root. Update it with every commit that changes research content.
 
