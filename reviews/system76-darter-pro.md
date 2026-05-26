@@ -1,3 +1,39 @@
+---
+model: System76 Darter Pro
+slug: system76-darter-pro
+manufacturer: System76
+status: available
+form_factor: clamshell
+weight_kg: 1.6
+
+display:
+  size_in: 14
+  aspect_ratio: "16:10"
+
+variants:
+  - year: 2024
+    cpu:
+      name: Intel Core Ultra H-series
+      cores: 14
+      threads: 18
+      arch: Meteor Lake
+    gpu:
+      name: Intel Arc
+      type: integrated
+    ram_gb: 64
+    ram_type: DDR5 SO-DIMM
+    ram_upgradeable: true
+    power:
+      pl1_w: 35
+      pl2_w: 65
+
+linux:
+  status: excellent
+  issues:
+    - Bottom of chassis can become uncomfortably hot
+    - Fan noise during compiles described as irritating
+---
+
 # System76 Darter Pro
 
 ### Specifications

@@ -1,3 +1,75 @@
+---
+model: ASUS ProArt PX13
+slug: asus-proart-px13
+manufacturer: ASUS
+status: recommended
+form_factor: convertible
+weight_kg: 1.39
+battery_wh: 73
+price_usd: 2000
+
+display:
+  size_in: 13.3
+  resolution: 2880x1800
+  panel: OLED
+  refresh_hz: 60
+  touch: true
+  aspect_ratio: "16:10"
+
+variants:
+  - year: 2024
+    sku: HN7306WV
+    cpu:
+      name: AMD Ryzen AI 9 HX 370
+      cores: 12
+      threads: 24
+      arch: Strix Point
+    gpu:
+      name: NVIDIA RTX 4050/4060/4070
+      type: discrete
+    ram_gb: 32
+    ram_type: LPDDR5X
+    power:
+      pl1_w: 65
+      pl2_w: 80
+      battery_w: 55
+    benchmarks:
+      cinebench_r23_multi: 23020
+      cinebench_r15_multi: 3489
+      cinebench_2024_multi: 769
+      cinebench_2024_single: 114
+
+  - year: 2026
+    sku: HN7306
+    cpu:
+      name: AMD Ryzen AI Max+ 395
+      cores: 16
+      threads: 32
+      arch: Strix Halo
+    gpu:
+      name: Radeon 8060S
+      type: integrated
+      compute_units: 40
+    ram_gb: 128
+    ram_type: unified memory
+    power:
+      pl1_w: 65
+      pl2_w: 80
+
+noise:
+  balanced_dba: 43
+  max_dba: 53
+
+linux:
+  status: fair
+  kernel_min: "6.7"
+  issues:
+    - WiFi MT7925 requires kernel 6.7+
+    - Keyboard backlight inconsistent
+    - Fan control erratic on stock kernel
+    - HDMI may not work without xanmod
+---
+
 # ASUS ProArt PX13 (HN7306)
 
 ## Model Variants

@@ -1,4 +1,46 @@
-# ASUS ROG Flow Z13 (2025) ⚠️ NOT RECOMMENDED
+---
+model: ASUS ROG Flow Z13
+slug: asus-rog-flow-z13-2025
+manufacturer: ASUS
+status: not_recommended
+form_factor: tablet
+weight_kg: 1.2
+
+display:
+  size_in: 13.4
+  touch: true
+  aspect_ratio: "16:10"
+
+variants:
+  - year: 2025
+    cpu:
+      name: AMD Ryzen AI Max+ 395
+      cores: 16
+      threads: 32
+      arch: Strix Halo
+    gpu:
+      name: Radeon 8060S
+      type: integrated
+      compute_units: 40
+    ram_gb: 128
+    ram_type: unified memory
+    power:
+      pl1_w: 60
+      pl2_w: 120
+
+noise:
+  performance_dba: 42
+  max_dba: 50
+
+linux:
+  status: unknown
+  issues:
+    - Law firm investigating overheating reports
+    - Random FPS drops requiring reboot
+    - Reports of thermal throttling and sudden shutdowns
+---
+
+# ASUS ROG Flow Z13 (2025) -- NOT RECOMMENDED
 
 ### Specifications
 - **Display:** 13.4" (tablet/2-in-1)

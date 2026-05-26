@@ -1,3 +1,43 @@
+---
+model: Lenovo Yoga Pro 7 14 AMD
+slug: lenovo-yoga-pro-7-14-amd
+manufacturer: Lenovo
+status: available
+form_factor: clamshell
+weight_kg: 1.55
+
+display:
+  size_in: 14
+  panel: OLED
+  refresh_hz: 120
+  aspect_ratio: "16:10"
+
+variants:
+  - year: 2025
+    cpu:
+      name: AMD Ryzen AI 9 365
+      cores: 10
+      threads: 20
+      arch: Strix Point
+    gpu:
+      name: Radeon 880M
+      type: integrated
+      compute_units: 12
+    ram_gb: 32
+    ram_type: LPDDR5X
+    power:
+      pl1_w: 70
+      pl2_w: 85
+
+noise:
+  idle_dba: 25
+  balanced_dba: 36
+  performance_dba: 47
+
+linux:
+  status: unknown
+---
+
 # Lenovo Yoga Pro 7 14 AMD
 
 ### Specifications

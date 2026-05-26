@@ -1,3 +1,39 @@
+---
+model: HP EliteBook 845 G11
+slug: hp-elitebook-845-g11
+manufacturer: HP
+status: available
+form_factor: clamshell
+weight_kg: 1.5
+
+display:
+  size_in: 14
+  aspect_ratio: "16:10"
+
+variants:
+  - year: 2024
+    cpu:
+      name: AMD Ryzen 7 PRO 8840HS
+      cores: 8
+      threads: 16
+      arch: Hawk Point
+    gpu:
+      name: Radeon 780M
+      type: integrated
+      compute_units: 12
+    ram_gb: 32
+    ram_type: LPDDR5X
+    power:
+      pl1_w: 41
+      pl2_w: 51
+
+noise:
+  idle_dba: 23.5
+
+linux:
+  status: good
+---
+
 # HP EliteBook 845 G11
 
 ### Specifications

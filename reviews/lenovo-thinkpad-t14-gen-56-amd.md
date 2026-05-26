@@ -1,3 +1,63 @@
+---
+model: Lenovo ThinkPad T14 Gen 5/6 AMD
+slug: lenovo-thinkpad-t14-gen-56-amd
+manufacturer: Lenovo
+status: available
+form_factor: clamshell
+weight_kg: 1.46
+
+display:
+  size_in: 14
+  aspect_ratio: "16:10"
+
+variants:
+  - year: 2024
+    cpu:
+      name: AMD Ryzen 7 PRO 8840U
+      cores: 8
+      threads: 16
+      arch: Hawk Point
+    gpu:
+      name: Radeon 780M
+      type: integrated
+      compute_units: 12
+    ram_gb: 32
+    ram_type: DDR5
+    ram_upgradeable: true
+    power:
+      pl1_w: 22.5
+      pl2_w: 30
+
+  - year: 2025
+    cpu:
+      name: AMD Ryzen AI 7 PRO 360
+      cores: 8
+      threads: 16
+      arch: Strix Point
+    gpu:
+      name: Radeon 860M
+      type: integrated
+      compute_units: 8
+    ram_gb: 32
+    ram_type: DDR5
+    ram_upgradeable: true
+    power:
+      pl1_w: 22.5
+      pl2_w: 30
+
+noise:
+  balanced_dba: 40
+  max_dba: 43.9
+
+linux:
+  status: good
+  kernel_min: "6.5"
+  boot_params:
+    - acpi.ec_no_wakeup=1
+  issues:
+    - Wi-Fi suspend issue resolved in kernel 6.16
+---
+
 # Lenovo ThinkPad T14 Gen 5/6 AMD
 
 ### Specifications

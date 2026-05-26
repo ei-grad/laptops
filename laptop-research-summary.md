@@ -122,16 +122,59 @@ Trade-off: Gets loud (~53 dB) at full load. 2-in-1 form factor.
 | System76 Darter Pro | 1.6 kg | ~35W | DIY tuning | Medium |
 | ROG Flow Z13 | 1.2 kg | 60-85W | 42-50 dB | **High ⚠** |
 
+## Intel Options (May 2026 Update)
+
+See [reviews/intel-qualcomm-linux-2026.md](reviews/intel-qualcomm-linux-2026.md) for full analysis.
+
+### 7. Framework 13 Pro Intel (Panther Lake) — BEST INTEL OPTION
+
+| Spec | Value |
+|------|-------|
+| Weight | 1.4 kg |
+| CPU | Core Ultra X7 358H (16C/16T, no HT) |
+| Sustained TDP | 15-80W range |
+| Battery | 74Wh, 10-15h Linux |
+| Linux | Excellent (open EC, LVFS, Ubuntu certified) |
+
+- Intel 18A process, vapor chamber cooling
+- LPCAMM2 RAM (upgradeable)
+- Under 30min Cinebench R24: 78C, ~48 dB
+- No DPTF concerns (open firmware)
+- **But ~30% slower than AMD HX 370 in sustained multi-core (Linux kernel compilation)**
+
+### Intel DPTF Status (2026)
+
+**No longer a blanket dealbreaker.** Lenovo OS-agnostic firmware fix via LVFS for ThinkPads (2019+), improved kernel int340x drivers, thermald --adaptive. Safe vendors: Lenovo ThinkPad, Dell XPS Dev Edition, Framework, System76. Still risky: Xiaomi, Huawei, generic OEMs.
+
+### Excluded Intel Models
+
+| Model | Reason |
+|-------|--------|
+| ThinkPad T14 Gen 6 Intel (Lunar Lake) | Only 8C/8T, 37W max TDP, 400MHz frequency bug on "balanced" profile |
+| Arrow Lake-H ultrabooks | Most are >2 kg; thin ones (Zenbook 14) sustain only 24W |
+| Any Lunar Lake for compilation | Efficiency platform, not for sustained workloads |
+
+## Qualcomm Status (May 2026)
+
+**Not recommended for Linux.** See [reviews/intel-qualcomm-linux-2026.md](reviews/intel-qualcomm-linux-2026.md).
+
+- Snapdragon X Elite Linux: Tiger Lake-level performance, thermal shutdowns, no KVM, TUXEDO canceled their laptop
+- Snapdragon X2 Elite: Impressive hardware (18C, 3nm, CB2024 multi 1,761) but Linux support 12-18 months away
+- No working KVM = Docker is crippled (QEMU user-mode only)
+- Battery advantage unrealized on Linux (immature power management)
+
 ## Excluded Models
 
 | Model | Reason |
 |-------|--------|
-| ASUS Zenbook 14 AMD | Throttles from 50W → 28W under sustained load |
+| ASUS Zenbook 14 AMD | Throttles from 50W to 28W under sustained load |
 | LG Gram 14 | "Worst thermal throttling for P-series" |
-| Framework 16 | Too heavy (2+ kg), CPU hits 100°C |
+| Framework 16 | Too heavy (2+ kg), CPU hits 100C |
 | Xiaomi/Huawei | Intel DPTF broken on Linux (up to 50% perf loss) |
 | ThinkPad P14s AMD | "Unacceptable noise" - even silent mode at 24W |
 | ROG Flow Z13 | Overheating investigation, inconsistent thermals |
+| **All Snapdragon X laptops** | **Linux support immature, Tiger Lake-level perf, no KVM** |
+| **Intel Lunar Lake (for compilation)** | **8C/8T max, 37W TDP, 400MHz bug** |
 
 ## CPU Comparison: 8840HS vs HX 370
 
@@ -145,6 +188,19 @@ Trade-off: Gets loud (~53 dB) at full load. 2-in-1 form factor.
 
 **Recommendation:** HX 370 is faster, but laptop implementation matters more. A well-cooled 8840HS at 41W (EliteBook) may outperform a throttled HX 370 at 28W.
 
+## Cross-Platform Comparison (Sustained Multi-Core, Linux)
+
+| CPU | CB R23 Multi | CB 2024 Multi | Linux Status | Notes |
+|-----|-------------|---------------|-------------|-------|
+| AMD Ryzen AI 9 HX 370 | 23,302 | 1,213 | Excellent | Best for compilation |
+| Intel Core Ultra 9 285H | 20,191 | 1,068 | Good (vendor-dep) | No HT, ~15% behind AMD |
+| Intel Core Ultra X7 358H | ~20,000 | ~1,000 est. | Good (improving) | 18A, best Intel efficiency |
+| AMD Ryzen AI 9 365 | ~20,000 | 996 | Excellent | Good value |
+| Snapdragon X Elite (Windows) | ~15,000 | 1,034 | **Bad** | Tiger Lake perf on Linux |
+| Intel Core Ultra 7 258V | N/A | N/A | OK (8C only) | Efficiency only |
+
+**AMD remains the clear winner for sustained multi-core Linux workloads.** Intel Panther Lake is the best Intel option but still ~30% behind. Qualcomm is not viable.
+
 ## Decision Matrix
 
 | Priority | Best Choice |
@@ -157,3 +213,5 @@ Trade-off: Gets loud (~53 dB) at full load. 2-in-1 form factor.
 | Proven/stable thermals | HP EliteBook 845 G11 (41W) |
 | Linux ecosystem / repairability | Framework 13 AMD |
 | Open firmware / DIY | System76 Darter Pro |
+| **Best Intel option** | **Framework 13 Pro (Panther Lake)** |
+| **Battery life + Intel** | ThinkPad X1 Carbon (Lunar Lake) — not for compilation |
