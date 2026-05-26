@@ -1,6 +1,6 @@
 ---
-model: TUXEDO InfinityBook Pro 14 Gen10
-slug: tuxedo-infinitybook-pro-14-gen10
+model: TUXEDO InfinityBook Pro 14
+slug: tuxedo-infinitybook-pro-14
 manufacturer: TUXEDO
 status: recommended
 form_factor: clamshell
