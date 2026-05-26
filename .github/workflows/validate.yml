@@ -1,0 +1,17 @@
+name: Validate
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Extract and validate frontmatter
+        run: uv run python -m scripts.extract
+
+      - name: Check laptops.jsonl is up to date
+        run: git diff --exit-code laptops.jsonl
