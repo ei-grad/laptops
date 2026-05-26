@@ -3,6 +3,18 @@
 ## 2026-05-26
 
 ### Added
+- ASUS Zenbook S 16 (UM5606): `reviews/asus-zenbook-s-16.md` — 28W/35W sustained, 3K OLED, ceraluminum, Linux works with kernel 6.14+ and amdgpu boot param
+- Gorgon Point overview: `reviews/2026-update-gorgon-point.md` — Ryzen AI 400 is a minor Strix Point refresh (+3-5% clocks), not worth upgrading
+- TUXEDO InfinityBook Pro 14 Gen10: `reviews/tuxedo-infinitybook-pro-14-gen10.md` — **65W sustained**, 128 GB upgradeable RAM, native Linux, 1.49 kg, CB R23 22,784
+- HP OmniBook Ultra 14: `reviews/hp-omnibook-ultra-14.md` — 47W sustained, CB R23 21,812, best value at $1,050
+- ASUS VivoBook S 14 OLED: `reviews/asus-vivobook-s14-oled.md` — lightest HX 370 at 1.31 kg, 54W sustained
+- Lenovo ThinkPad P14s Gen 6 AMD: `reviews/lenovo-thinkpad-p14s-gen-6-amd.md` — HX PRO 370, 36W sustained, reconsidered (Gen 6 improved cooling vs older gens)
+- Lenovo ThinkPad T14 Gen 7 AMD: `reviews/lenovo-thinkpad-t14-gen-7-amd.md` — Gorgon Point PRO, 75 Wh battery, SO-DIMM RAM, announced April 2026
+- HP EliteBook X G2a: `reviews/hp-elitebook-x-g2a.md` — sub-1 kg with Gorgon Point, thermal concerns
+- ASUS ExpertBook P5 G2: announced, claims 45W sustained at 1.27 kg, 96 GB SO-DIMM — needs review verification
+- LPCAMM2 laptops overview: `reviews/lpcamm2-laptops-2026.md` — 12 models tracked, mostly Intel; first AMD LPCAMM2 is ThinkPad P16s Gen 5 (96 GB, June 2026)
+- Dell Pro Precision 5 14S — 1.4 kg workstation with LPCAMM2 up to 64 GB, Intel or AMD
+- ThinkPad T14 Gen 7 Intel variant has LPCAMM2 (AMD variant uses SO-DIMM DDR5)
 - Intel and Qualcomm research: `reviews/intel-qualcomm-linux-2026.md` — comprehensive analysis of non-AMD options for sustained Linux workloads
 - Intel DPTF/DTT status update — no longer a blanket dealbreaker; Lenovo OS-agnostic firmware fix via LVFS, improved kernel int340x drivers, vendor risk assessment
 - Intel Arrow Lake-H (Core Ultra 200H) — benchmarks, sustained power data by laptop (MSI Prestige 16 at 45-55W vs ASUS Zenbook Duo at 24W), ~15% behind AMD HX 370 multi-core
@@ -14,14 +26,18 @@
 - Cross-platform comparison table: AMD vs Intel vs Qualcomm for sustained Linux multi-core
 
 ### Updated
-- `cpu-comparison.md` — expanded Intel/Qualcomm sections with Panther Lake Phoronix data, X2 Elite benchmarks, DPTF status, Lunar Lake issues, and cross-platform summary table
+- `cpu-comparison.md` — added Gorgon Point (HX 470/475, AI 9 465, AI 7 450), Fire Range (9955HX3D/9955HX/9850HX), Gorgon Halo (Max+ PRO 495), new Strix Halo SKUs (Max+ 392/388), Intel Panther Lake/Arrow Lake/Lunar Lake, Qualcomm X Elite/X2 Elite
 - `laptop-research-summary.md` — added Intel section (Framework 13 Pro as best Intel option), Qualcomm status, updated excluded models list, added cross-platform comparison and decision matrix entries
+- ThinkPad P14s AMD — reconsidered: Gen 6 reviews show improved cooling, no longer excluded
+- Linux kernel notes — kernel 6.14 EPP default change, 6.16 amd-pstate improvements, 7.1 dynamic EPP, avoid kernel 6.18/6.19 amdgpu bugs
 
 ### Excluded
 - All Snapdragon X laptops — Linux support immature, Tiger Lake-level performance, no KVM virtualization
 - Intel Lunar Lake for compilation — only 8C/8T at 37W max, 400MHz frequency bug
+- Dell Pro 14 Plus — throttles HX 370 to 25W, CB R23 only 12,684 (wastes the CPU)
 
 ### Recommendations
+- **TUXEDO InfinityBook Pro 14 Gen10** — new top pick for Linux: 65W sustained, 128 GB upgradeable, native Linux, $1,200 EUR
 - AMD remains the clear winner for sustained multi-core Linux workloads
 - Intel Panther Lake (Framework 13 Pro) is the best Intel option but ~30% behind AMD HX 370 in throughput
 - DPTF is no longer a universal Intel dealbreaker — safe with Lenovo ThinkPad, Dell XPS Dev Edition, Framework, System76

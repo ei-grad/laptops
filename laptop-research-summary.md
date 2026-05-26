@@ -111,20 +111,41 @@ Trade-off: Gets loud (~53 dB) at full load. 2-in-1 form factor.
 
 ## Comparison Table
 
-| Model | Weight | Sustained W | Noise | Risk |
-|-------|--------|-------------|-------|------|
-| **ThinkPad T14 AMD** | 1.46 kg | 22.5W | ~40 dB | Low ✓ |
-| **ThinkPad T14s G6 AMD** | 1.3 kg | 25W | ~38-40 dB | Low ✓ |
-| **HP EliteBook 845 G11** | 1.5 kg | 41W | Quiet | Low ✓ |
-| **ASUS ProArt PX13** | 1.39 kg | 65W | 40-53 dB | Medium |
-| **Yoga Pro 7 14 AMD** | 1.55 kg | 70W | 36-47 dB | Medium |
-| **Framework 13 AMD** | 1.3 kg | 35W | ~41 dB | Medium |
-| System76 Darter Pro | 1.6 kg | ~35W | DIY tuning | Medium |
-| ROG Flow Z13 | 1.2 kg | 60-85W | 42-50 dB | **High ⚠** |
+### Proven (reviewed, benchmarked)
+
+| Model | Weight | Sustained W | CB R23 Multi | Noise (balanced) | RAM | Linux | Risk |
+|-------|--------|-------------|-------------|-----------------|-----|-------|------|
+| **TUXEDO InfinityBook Pro 14** | 1.49 kg | **65W** | **22,784** | 34 dB | 128 GB SO-DIMM | **Excellent** | Low ✓ |
+| **ASUS ProArt PX13** | 1.39 kg | **65W** | 23,020 | 43 dB | 32 GB soldered | Fair | Medium |
+| **ASUS VivoBook S 14 OLED** | **1.31 kg** | 54W | 21,058 | 39 dB | 32 GB soldered | Unknown | Medium |
+| **HP OmniBook Ultra 14** | 1.53 kg | 47W | 21,812 | ~40 dB | 32 GB soldered | Unknown | Medium |
+| **HP EliteBook 845 G11** | 1.5 kg | 41W | — | Quiet | 32 GB soldered | Good | Low ✓ |
+| **ThinkPad P14s Gen 6 AMD** | 1.44 kg | 36W | 18,520 | Quiet | 64 GB soldered | Good | Low ✓ |
+| **ASUS Zenbook S16 (2026)** | 1.5 kg | 35W | 17,580 | 36 dB | 32 GB soldered | Good | Low ✓ |
+| **Framework 13 Pro AMD** | 1.4 kg | ~33W | — | ~41 dB | 64 GB LPCAMM2 | **Excellent** | Low ✓ |
+| **Yoga Pro 7 14 AMD** | 1.55 kg | **70W** | — | 36 dB | 32 GB soldered | Unknown | Medium |
+| **ThinkPad T14 Gen 5/6 AMD** | 1.46 kg | 22.5W | — | ~40 dB | 32 GB SO-DIMM | Good | Low ✓ |
+| **ThinkPad T14s G6 AMD** | 1.3 kg | 25W | — | ~38-40 dB | 32 GB soldered | Good | Low ✓ |
+
+### Announced / Awaiting Reviews
+
+| Model | Weight | Sustained W (est.) | RAM | Key Feature | Status |
+|-------|--------|-------------------|-----|-------------|--------|
+| **ASUS ExpertBook P5 G2** | 1.27 kg | **45W** (claimed) | 96 GB SO-DIMM | Best perf/weight if claim holds | Needs review |
+| **ThinkPad T14 Gen 7 AMD** | 1.28 kg | 25-35W | 64 GB SO-DIMM | 75 Wh battery + RJ45 | Available Apr 2026 |
+| **HP EliteBook X G2a** | **<1 kg** | TBD | 64 GB | Lightest AMD business | Thermal concerns |
+
+### Not Recommended
+
+| Model | Weight | Reason |
+|-------|--------|--------|
+| ROG Flow Z13 | 1.2 kg | Overheating investigation, inconsistent thermals |
+| Dell Pro 14 Plus | 1.58 kg | Throttles HX 370 to 25W — CB R23 only 12,684 |
+| System76 Darter Pro | 1.6 kg | Hot, noisy during compiles |
 
 ## Intel Options (May 2026 Update)
 
-See [reviews/intel-qualcomm-linux-2026.md](reviews/intel-qualcomm-linux-2026.md) for full analysis.
+See [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026.md) for full analysis.
 
 ### 7. Framework 13 Pro Intel (Panther Lake) — BEST INTEL OPTION
 
@@ -156,7 +177,7 @@ See [reviews/intel-qualcomm-linux-2026.md](reviews/intel-qualcomm-linux-2026.md)
 
 ## Qualcomm Status (May 2026)
 
-**Not recommended for Linux.** See [reviews/intel-qualcomm-linux-2026.md](reviews/intel-qualcomm-linux-2026.md).
+**Not recommended for Linux.** See [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026.md).
 
 - Snapdragon X Elite Linux: Tiger Lake-level performance, thermal shutdowns, no KVM, TUXEDO canceled their laptop
 - Snapdragon X2 Elite: Impressive hardware (18C, 3nm, CB2024 multi 1,761) but Linux support 12-18 months away
@@ -205,13 +226,17 @@ See [reviews/intel-qualcomm-linux-2026.md](reviews/intel-qualcomm-linux-2026.md)
 
 | Priority | Best Choice |
 |----------|-------------|
-| Balanced (performance + quiet + weight) | ThinkPad T14 AMD |
-| Lightest | ThinkPad T14s G6 AMD (1.3 kg) |
-| Maximum sustained power (14") | Yoga Pro 7 14 (70W) |
-| Best perf/weight ratio | **ASUS ProArt PX13** (65W @ 1.39kg) |
-| Highest multi-core (sub-14") | **ASUS ProArt PX13** (CB R23: 23,020) |
+| **Best overall (perf + Linux + RAM)** | **TUXEDO InfinityBook Pro 14** (65W, 128 GB, native Linux) |
+| Best perf/weight ratio | ASUS ProArt PX13 (65W @ 1.39 kg) or VivoBook S 14 (54W @ 1.31 kg) |
+| Best value | HP OmniBook Ultra 14 (47W, CB R23 21,812, $1,050) |
+| Lightest | ThinkPad T14s G6 AMD (1.3 kg, 25W) |
+| Maximum sustained power (14") | Yoga Pro 7 14 (70W) — but loud |
 | Proven/stable thermals | HP EliteBook 845 G11 (41W) |
-| Linux ecosystem / repairability | Framework 13 AMD |
-| Open firmware / DIY | System76 Darter Pro |
-| **Best Intel option** | **Framework 13 Pro (Panther Lake)** |
-| **Battery life + Intel** | ThinkPad X1 Carbon (Lunar Lake) — not for compilation |
+| Linux ecosystem / repairability | Framework 13 Pro Intel (LPCAMM2, Ubuntu certified) |
+| Most upgradeable RAM (SO-DIMM) | TUXEDO IB Pro 14 (128 GB DDR5 SO-DIMM) |
+| Most upgradeable RAM (LPCAMM2) | ThinkPad P16s Gen 5 AMD (96 GB LPCAMM2, June 2026) |
+| LPCAMM2 + lightest | ThinkPad T14 Gen 7 Intel (1.31 kg, 64 GB) or Dell Precision 5 14S (1.4 kg) |
+| Best 16" all-rounder | ASUS Zenbook S16 2026 (35W, 83 Wh, quiet) |
+| Business + RJ45 + battery | ThinkPad T14 Gen 7 AMD (75 Wh, SO-DIMM, RJ45) — needs review |
+| Best Intel option | Framework 13 Pro (Panther Lake) — ~30% behind AMD |
+| Battery life + Intel | ThinkPad X1 Carbon (Lunar Lake) — not for compilation |

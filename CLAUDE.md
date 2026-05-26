@@ -6,7 +6,8 @@ Research notes for Linux-compatible laptops with sustained CPU performance.
 - `laptop-research-summary.md` - Quick reference and recommendations
 - `laptop-detailed-reviews.md` - Full review data per model
 - `cpu-comparison.md` - CPU benchmarks (AMD, Intel, Qualcomm)
-- `reviews/` - Individual laptop review files (with YAML frontmatter)
+- `reviews/` - Individual laptop review files (with YAML frontmatter, one model per file)
+- `overviews/` - Thematic overview articles (platform comparisons, LPCAMM2 guide, excluded models, etc.)
 - `laptops.jsonl` - Structured data extracted from review frontmatter
 - `scripts/` - Extraction and validation tooling
 - `CHANGELOG.md` - Research update log (see Changelog section below)
