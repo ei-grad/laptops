@@ -72,7 +72,7 @@ When modifying any data, ensure it stays consistent across all files that refere
 - `power.pl1_w` / `pl2_w` must be actual measured sustained/burst values from reviews, NOT cTDP spec ranges from AMD/Intel datasheets
 - If sustained power is not yet reviewed, use conservative estimates and note "est." in body text
 - Benchmark scores must cite the specific review source — same CPU in different laptops gives different scores
-- RAM type matters: LPCAMM2 is not SO-DIMM. Always specify per-variant, especially when Intel/AMD variants differ (e.g. Framework 13 Pro)
+- RAM details matter: always record `ram_type` (LPDDR5X, DDR5 SO-DIMM, LPCAMM2 — these are not interchangeable), speed grade when known (e.g. DDR5-5600, LPDDR5X-7500), and max capacity. Specify per-variant when Intel/AMD variants differ (e.g. Framework 13 Pro). `ram_upgradeable` is a secondary detail — RAM type, speed, and max capacity are more important for comparison
 - Prices: specify currency. `price_usd` in frontmatter is USD; note EUR/other in body text
 
 ### When adding new models
