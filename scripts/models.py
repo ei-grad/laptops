@@ -89,6 +89,7 @@ class LinuxCompat(BaseModel):
     status: Literal["excellent", "good", "fair", "poor", "unknown"]
     kernel_min: str | None = None
     boot_params: list[str] = []
+    notes: list[str] = []
     issues: list[str] = []
 
 
@@ -107,3 +108,4 @@ class Laptop(BaseModel):
     variants: list[Variant]
     noise: NoiseLevel = NoiseLevel()
     linux: LinuxCompat = LinuxCompat(status="unknown")
+    sources: list[str] = []

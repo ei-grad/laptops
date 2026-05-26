@@ -146,7 +146,8 @@ Gorgon Point (Ryzen AI 400 series) launched Q1 2026 as a mid-cycle refresh of St
 | CPU (Intel) | Core Ultra 5/X7/X9 Series 3 |
 | Weight | 1.4 kg |
 | Battery | **74 Wh** (21% up from prior gen) |
-| RAM | LPCAMM2, up to 64 GB LPDDR5X-7467 (user-replaceable!) |
+| RAM (Intel) | LPCAMM2, up to 64 GB LPDDR5X-7467 (user-replaceable) |
+| RAM (AMD) | DDR5-5600 SO-DIMM, up to 64 GB (user-replaceable) |
 | Display | 13.5" 2880x1920 (3:2), 700 nits, 1800:1 |
 | Thickness | <16 mm |
 | Price | From $1,199 (DIY) / $1,499 (pre-built) |
@@ -155,7 +156,7 @@ Gorgon Point (Ryzen AI 400 series) launched Q1 2026 as a mid-cycle refresh of St
 - Full CNC aluminum chassis (ground-up redesign)
 - Haptic touchpad
 - Touch display option
-- LPCAMM2 memory (replaceable, unlike soldered LPDDR5X in most ultrabooks)
+- LPCAMM2 memory on Intel variant (AMD uses SO-DIMM DDR5)
 - Wi-Fi 7 (Intel BE211)
 - **First Framework laptop Ubuntu Certified by Canonical**
 - Ubuntu pre-built configs outselling Windows
@@ -416,7 +417,7 @@ Community frustration exists -- AMD can do 16 full Zen 5 cores in the AI Max+ 39
 | **ThinkPad P14s Gen 7 AMD** | 1.29 kg | HX Pro 470 | ~25-35W (est) | 75 Wh | **96 GB SO-DIMM** | EUR 1,990+ | Expected good |
 | **ThinkPad T14s Gen 7 AMD** | **1.1 kg** | Gorgon Point | TBD | 58 Wh | Soldered | TBD | Not yet avail |
 | **HP EliteBook X G2a** | **<1 kg** | HX Pro 470 | TBD (concern) | 56/68 Wh | 64 GB | TBD | Unknown |
-| **Framework 13 Pro (AMD)** | 1.4 kg | HX 370 (Strix) | ~33W | **74 Wh** | 64 GB LPCAMM2 | $1,199+ | Excellent |
+| **Framework 13 Pro (AMD)** | 1.4 kg | HX 370 (Strix) | ~33W | **74 Wh** | 64 GB SO-DIMM | $1,199+ | Excellent |
 | **ASUS ZenBook S16** | 1.5 kg | AI 9 465 | **35W** | **83 Wh** | 32 GB | ~$1,300 | Likely good |
 | **ASUS ExpertBook P5 G2** | **1.27 kg** | HX 470 | **45W** (claimed) | 70 Wh | **96 GB SO-DIMM** | TBD | Unknown |
 | **ASUS ProArt PX13 (2026)** | 1.38 kg | Max+ 395 (Halo) | ~65W+ | 73 Wh | 128 GB | ~$2,000+ | Needs testing |
@@ -433,7 +434,7 @@ Community frustration exists -- AMD can do 16 full Zen 5 cores in the AI Max+ 39
 3. **HP EliteBook X G2a** -- Sub-1 kg is tempting but may not sustain high power.
 
 **Available now, proven:**
-4. **Framework 13 Pro (AMD)** -- Best Linux ecosystem, 74 Wh, LPCAMM2 RAM. HX 370 at ~33W sustained. Ubuntu certified.
+4. **Framework 13 Pro (AMD)** -- Best Linux ecosystem, 74 Wh, SO-DIMM RAM. HX 370 at ~33W sustained. Ubuntu certified.
 5. **ASUS ZenBook S16** -- 35W sustained, 83 Wh, quiet. Good all-rounder but only 10-core AI 9 465.
 
 **High performance (heavier):**

@@ -1,6 +1,6 @@
 # Linux Laptop Research: Sustained CPU Performance
 
-**Date:** 2026-01-22
+**Date:** 2026-05-26
 **Use Case:** Kernel compilation, PySpark data processing (sustained multi-core loads)
 
 ## Requirements Summary
@@ -122,7 +122,7 @@ Trade-off: Gets loud (~53 dB) at full load. 2-in-1 form factor.
 | **HP EliteBook 845 G11** | 1.5 kg | 41W | — | Quiet | 32 GB soldered | Good | Low ✓ |
 | **ThinkPad P14s Gen 6 AMD** | 1.44 kg | 36W | 18,520 | Quiet | 64 GB soldered | Good | Low ✓ |
 | **ASUS Zenbook S16 (2026)** | 1.5 kg | 35W | 17,580 | 36 dB | 32 GB soldered | Good | Low ✓ |
-| **Framework 13 Pro AMD** | 1.4 kg | ~33W | — | ~41 dB | 64 GB LPCAMM2 | **Excellent** | Low ✓ |
+| **Framework 13 Pro AMD** | 1.4 kg | ~33W | — | ~41 dB | 64 GB SO-DIMM | **Excellent** | Low ✓ |
 | **Yoga Pro 7 14 AMD** | 1.55 kg | **70W** | — | 36 dB | 32 GB soldered | Unknown | Medium |
 | **ThinkPad T14 Gen 5/6 AMD** | 1.46 kg | 22.5W | — | ~40 dB | 32 GB SO-DIMM | Good | Low ✓ |
 | **ThinkPad T14s G6 AMD** | 1.3 kg | 25W | — | ~38-40 dB | 32 GB soldered | Good | Low ✓ |
@@ -192,7 +192,7 @@ See [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026
 | LG Gram 14 | "Worst thermal throttling for P-series" |
 | Framework 16 | Too heavy (2+ kg), CPU hits 100C |
 | Xiaomi/Huawei | Intel DPTF broken on Linux (up to 50% perf loss) |
-| ThinkPad P14s AMD | "Unacceptable noise" - even silent mode at 24W |
+| ThinkPad P14s AMD (Gen 5 and earlier) | "Unacceptable noise" — Gen 6 reconsidered, see comparison table |
 | ROG Flow Z13 | Overheating investigation, inconsistent thermals |
 | **All Snapdragon X laptops** | **Linux support immature, Tiger Lake-level perf, no KVM** |
 | **Intel Lunar Lake (for compilation)** | **8C/8T max, 37W TDP, 400MHz bug** |
@@ -232,7 +232,7 @@ See [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026
 | Lightest | ThinkPad T14s G6 AMD (1.3 kg, 25W) |
 | Maximum sustained power (14") | Yoga Pro 7 14 (70W) — but loud |
 | Proven/stable thermals | HP EliteBook 845 G11 (41W) |
-| Linux ecosystem / repairability | Framework 13 Pro Intel (LPCAMM2, Ubuntu certified) |
+| Linux ecosystem / repairability | Framework 13 Pro (Ubuntu certified; Intel=LPCAMM2, AMD=SO-DIMM) |
 | Most upgradeable RAM (SO-DIMM) | TUXEDO IB Pro 14 (128 GB DDR5 SO-DIMM) |
 | Most upgradeable RAM (LPCAMM2) | ThinkPad P16s Gen 5 AMD (96 GB LPCAMM2, June 2026) |
 | LPCAMM2 + lightest | ThinkPad T14 Gen 7 Intel (1.31 kg, 64 GB) or Dell Precision 5 14S (1.4 kg) |

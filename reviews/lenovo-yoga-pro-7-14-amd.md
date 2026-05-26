@@ -5,39 +5,37 @@ manufacturer: Lenovo
 status: available
 form_factor: clamshell
 weight_kg: 1.55
-
 display:
-  size_in: 14
+  aspect_ratio: '16:10'
   panel: OLED
   refresh_hz: 120
-  aspect_ratio: "16:10"
-
+  size_in: 14
 variants:
-  - year: 2025
-    cpu:
-      name: AMD Ryzen AI 9 365
-      cores: 10
-      threads: 20
-      arch: Strix Point
-    gpu:
-      name: Radeon 880M
-      type: integrated
-      compute_units: 12
-    ram_gb: 32
-    ram_type: LPDDR5X
-    power:
-      pl1_w: 70
-      pl2_w: 85
-
+- cpu:
+    arch: Strix Point
+    cores: 10
+    name: AMD Ryzen AI 9 365
+    threads: 20
+  gpu:
+    compute_units: 12
+    name: Radeon 880M
+    type: integrated
+  power:
+    pl1_w: 70
+    pl2_w: 85
+  ram_gb: 32
+  ram_type: LPDDR5X
+  year: 2025
 noise:
-  idle_dba: 25
   balanced_dba: 36
+  idle_dba: 25
   performance_dba: 47
-
 linux:
   status: unknown
+sources:
+- https://www.notebookcheck.net/90-Hz-OLED-with-AdobeRGB-Lenovo-Yoga-Pro-7-14-G10-laptop-review.1002232.0.html
+- https://www.ultrabookreview.com/69904-lenovo-yoga-pro7-review/
 ---
-
 # Lenovo Yoga Pro 7 14 AMD
 
 ### Specifications
@@ -66,10 +64,3 @@ linux:
 - High Performance mode is LOUD (47 dB)
 - 100W PSU drains battery under full load
 - Previous gen complaints about noise/heat
-
-### Sources
-- [NotebookCheck Yoga Pro 7 G10](https://www.notebookcheck.net/90-Hz-OLED-with-AdobeRGB-Lenovo-Yoga-Pro-7-14-G10-laptop-review.1002232.0.html)
-- [UltrabookReview Yoga Pro 7 Gen 9](https://www.ultrabookreview.com/69904-lenovo-yoga-pro7-review/)
-
----
-

@@ -18,21 +18,23 @@ Each `reviews/*.md` file has YAML frontmatter with structured laptop specs (mode
 
 To extract/validate all frontmatter into `laptops.jsonl`:
 ```bash
-uv run python scripts/extract.py
+uv run python -m scripts.extract
 ```
 
 When adding or updating a review:
 1. Add/update YAML frontmatter at the top of the markdown file
 2. The frontmatter `slug` must match the filename (without `.md`)
-3. Run `uv run python scripts/extract.py` to validate and regenerate JSONL
+3. Run `uv run python -m scripts.extract` to validate and regenerate JSONL
 4. Commit both the updated `.md` and `laptops.jsonl`
 
 ### Frontmatter conventions
 - `status`: recommended | available | not_recommended | announced | excluded
 - `linux.status`: excellent (OOB, no workarounds) | good (minor issues) | fair (needs custom kernel/boot params) | poor (major breakage) | unknown
+- `linux.notes`: positive attributes (e.g. Ubuntu Certified); `linux.issues`: actual problems
 - `noise.*_dba`: idle (fans off), low_power (whisper/silent), balanced, performance, max (turbo/stress)
 - `power.pl1_w` / `pl2_w`: use float (e.g. 22.5, not 22)
 - `battery_wh` at variant level when it differs between variants; top-level value is the default/base
+- `sources`: list of URLs; move pure-link "Sources" sections from body into frontmatter, keep inline references in text
 
 ## Guidelines
 - Focus on sustained multi-core performance under Linux

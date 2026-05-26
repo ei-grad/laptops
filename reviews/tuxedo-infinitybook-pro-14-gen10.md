@@ -7,48 +7,46 @@ form_factor: clamshell
 weight_kg: 1.49
 battery_wh: 80
 price_usd: 1300
-
 display:
-  size_in: 14.0
-  resolution: 2880x1800
+  aspect_ratio: '16:10'
   panel: IPS
   refresh_hz: 120
-  aspect_ratio: "16:10"
-
+  resolution: 2880x1800
+  size_in: 14.0
 variants:
-  - year: 2025
-    cpu:
-      name: AMD Ryzen AI 9 HX 370
-      cores: 12
-      threads: 24
-      arch: Strix Point
-      boost_ghz: 5.1
-    gpu:
-      name: Radeon 890M
-      type: integrated
-      compute_units: 16
-    ram_gb: 128
-    ram_type: DDR5 SO-DIMM
-    ram_upgradeable: true
-    power:
-      pl1_w: 65
-      pl2_w: 70
-    benchmarks:
-      cinebench_r23_multi: 22784
-      cinebench_r23_single: 2036
-      geekbench6_multi: 15735
-
+- benchmarks:
+    cinebench_r23_multi: 22784
+    cinebench_r23_single: 2036
+    geekbench6_multi: 15735
+  cpu:
+    arch: Strix Point
+    boost_ghz: 5.1
+    cores: 12
+    name: AMD Ryzen AI 9 HX 370
+    threads: 24
+  gpu:
+    compute_units: 16
+    name: Radeon 890M
+    type: integrated
+  power:
+    pl1_w: 65
+    pl2_w: 70
+  ram_gb: 128
+  ram_type: DDR5 SO-DIMM
+  ram_upgradeable: true
+  year: 2025
 noise:
   balanced_dba: 34.1
-  performance_dba: 42
   max_dba: 46.6
-
+  performance_dba: 42
 linux:
-  status: excellent
-  kernel_min: "6.10"
   issues: []
+  kernel_min: '6.10'
+  status: excellent
+sources:
+- https://www.notebookcheck.net/Tuxedo-Infinity-Book-Pro-14-Gen10-Review-Linux-ultrabook-with-AMD-Zen-5-128-GB-RAM.1095463.0.html
+- https://www.tuxedocomputers.com/en/TUXEDO-InfinityBook-Pro-14-Gen10.tuxedo
 ---
-
 # TUXEDO InfinityBook Pro 14 Gen10
 
 ## Overview

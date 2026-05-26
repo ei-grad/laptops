@@ -17,8 +17,9 @@
 - Limited sustained-load review data
 - Source: [Phoronix Lenovo Thermal Throttling](https://www.phoronix.com/news/Lenovo-Linux-Thermal-Throttling)
 
-### ThinkPad P14s AMD
+### ThinkPad P14s AMD (Gen 5 and earlier)
 - Even silent mode runs at 24W ("windmill")
 - "Unacceptable noise" per user reports
 - Profiles unbalanced vs T14
 - Source: [Fedora Linux on P14s Gen 5](https://www.bovender.de/posts/2024/08/experience-with-running-fedora-linux-on-a-thinkpad-p14s-gen-5/)
+- **Note:** Gen 6 AMD (HX PRO 370) reconsidered — improved cooling, see `reviews/lenovo-thinkpad-p14s-gen-6-amd.md`

@@ -5,59 +5,57 @@ manufacturer: Lenovo
 status: available
 form_factor: clamshell
 weight_kg: 1.46
-
 display:
+  aspect_ratio: '16:10'
   size_in: 14
-  aspect_ratio: "16:10"
-
 variants:
-  - year: 2024
-    cpu:
-      name: AMD Ryzen 7 PRO 8840U
-      cores: 8
-      threads: 16
-      arch: Hawk Point
-    gpu:
-      name: Radeon 780M
-      type: integrated
-      compute_units: 12
-    ram_gb: 32
-    ram_type: DDR5
-    ram_upgradeable: true
-    power:
-      pl1_w: 22.5
-      pl2_w: 30
-
-  - year: 2025
-    cpu:
-      name: AMD Ryzen AI 7 PRO 360
-      cores: 8
-      threads: 16
-      arch: Strix Point
-    gpu:
-      name: Radeon 860M
-      type: integrated
-      compute_units: 8
-    ram_gb: 32
-    ram_type: DDR5
-    ram_upgradeable: true
-    power:
-      pl1_w: 22.5
-      pl2_w: 30
-
+- cpu:
+    arch: Hawk Point
+    cores: 8
+    name: AMD Ryzen 7 PRO 8840U
+    threads: 16
+  gpu:
+    compute_units: 12
+    name: Radeon 780M
+    type: integrated
+  power:
+    pl1_w: 22.5
+    pl2_w: 30
+  ram_gb: 32
+  ram_type: DDR5
+  ram_upgradeable: true
+  year: 2024
+- cpu:
+    arch: Strix Point
+    cores: 8
+    name: AMD Ryzen AI 7 PRO 360
+    threads: 16
+  gpu:
+    compute_units: 8
+    name: Radeon 860M
+    type: integrated
+  power:
+    pl1_w: 22.5
+    pl2_w: 30
+  ram_gb: 32
+  ram_type: DDR5
+  ram_upgradeable: true
+  year: 2025
 noise:
   balanced_dba: 40
   max_dba: 43.9
-
 linux:
-  status: good
-  kernel_min: "6.5"
   boot_params:
-    - acpi.ec_no_wakeup=1
+  - acpi.ec_no_wakeup=1
   issues:
-    - Wi-Fi suspend issue resolved in kernel 6.16
+  - Wi-Fi suspend issue resolved in kernel 6.16
+  kernel_min: '6.5'
+  status: good
+sources:
+- https://www.notebookcheck.net/Lenovo-ThinkPad-T14-G3-review-Business-laptop-is-worse-with-Intel-and-Nvidia.702431.0.html
+- https://www.cruisetech.co.uk/blogs/news/lenovo-thinkpad-t14s-vs-t14
+- https://wiki.archlinux.org/title/Lenovo_ThinkPad_P14s_(AMD)_Gen_5
 ---
-
 # Lenovo ThinkPad T14 Gen 5/6 AMD
 
 ### Specifications
@@ -83,11 +81,3 @@ linux:
 - AMD P-State EPP driver default since kernel 6.5
 - Wi-Fi suspend issue resolved in kernel 6.16
 - Workaround for sleep: `acpi.ec_no_wakeup=1`
-
-### Sources
-- [NotebookCheck T14 G3 Review](https://www.notebookcheck.net/Lenovo-ThinkPad-T14-G3-review-Business-laptop-is-worse-with-Intel-and-Nvidia.702431.0.html)
-- [CruiseTech T14 vs T14s](https://www.cruisetech.co.uk/blogs/news/lenovo-thinkpad-t14s-vs-t14)
-- [Arch Wiki P14s Gen 5](https://wiki.archlinux.org/title/Lenovo_ThinkPad_P14s_(AMD)_Gen_5)
-
----
-

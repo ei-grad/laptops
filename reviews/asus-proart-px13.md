@@ -7,69 +7,75 @@ form_factor: convertible
 weight_kg: 1.39
 battery_wh: 73
 price_usd: 2000
-
 display:
-  size_in: 13.3
-  resolution: 2880x1800
+  aspect_ratio: '16:10'
   panel: OLED
   refresh_hz: 60
+  resolution: 2880x1800
+  size_in: 13.3
   touch: true
-  aspect_ratio: "16:10"
-
 variants:
-  - year: 2024
-    sku: HN7306WV
-    cpu:
-      name: AMD Ryzen AI 9 HX 370
-      cores: 12
-      threads: 24
-      arch: Strix Point
-    gpu:
-      name: NVIDIA RTX 4050/4060/4070
-      type: discrete
-    ram_gb: 32
-    ram_type: LPDDR5X
-    power:
-      pl1_w: 65
-      pl2_w: 80
-      battery_w: 55
-    benchmarks:
-      cinebench_r23_multi: 23020
-      cinebench_r15_multi: 3489
-      cinebench_2024_multi: 769
-      cinebench_2024_single: 114
-
-  - year: 2026
-    sku: HN7306
-    cpu:
-      name: AMD Ryzen AI Max+ 395
-      cores: 16
-      threads: 32
-      arch: Strix Halo
-    gpu:
-      name: Radeon 8060S
-      type: integrated
-      compute_units: 40
-    ram_gb: 128
-    ram_type: unified memory
-    power:
-      pl1_w: 65
-      pl2_w: 80
-
+- benchmarks:
+    cinebench_2024_multi: 769
+    cinebench_2024_single: 114
+    cinebench_r15_multi: 3489
+    cinebench_r23_multi: 23020
+  cpu:
+    arch: Strix Point
+    cores: 12
+    name: AMD Ryzen AI 9 HX 370
+    threads: 24
+  gpu:
+    name: NVIDIA RTX 4050/4060/4070
+    type: discrete
+  power:
+    battery_w: 55
+    pl1_w: 65
+    pl2_w: 80
+  ram_gb: 32
+  ram_type: LPDDR5X
+  sku: HN7306WV
+  year: 2024
+- cpu:
+    arch: Strix Halo
+    cores: 16
+    name: AMD Ryzen AI Max+ 395
+    threads: 32
+  gpu:
+    compute_units: 40
+    name: Radeon 8060S
+    type: integrated
+  power:
+    pl1_w: 65
+    pl2_w: 80
+  ram_gb: 128
+  ram_type: unified memory
+  sku: HN7306
+  year: 2026
 noise:
   balanced_dba: 43
   max_dba: 53
-
 linux:
-  status: fair
-  kernel_min: "6.7"
   issues:
-    - WiFi MT7925 requires kernel 6.7+
-    - Keyboard backlight inconsistent
-    - Fan control erratic on stock kernel
-    - HDMI may not work without xanmod
+  - WiFi MT7925 requires kernel 6.7+
+  - Keyboard backlight inconsistent
+  - Fan control erratic on stock kernel
+  - HDMI may not work without xanmod
+  kernel_min: '6.7'
+  status: fair
+sources:
+- https://dl.xanmod.org/archive.key
+- http://deb.xanmod.org
+- https://www.linuxquestions.org/questions/linux-laptop-and-netbook-25/ubuntu-24-04-on-asus-proart-px13-hn7306wi_hn7306wi-4175751777-new/
+- https://linux-hardware.org/?probe=c0107457aa
+- https://www.notebookcheck.net/Asus-ProArt-PX13-review-The-world-s-fastest-13-3-inch-2-in-1-thanks-to-AMD-Zen-5-and-RTX-4070-laptop.868429.0.html
+- https://www.pcworld.com/article/2418049/asus-proart-px13-review.html
+- https://www.ultrabookreview.com/72323-asus-proart-px13-review/
+- https://www.windowscentral.com/laptops/asus-proart-px13-review
+- https://www.ultrabookreview.com/74193-asus-strix-halo-laptops-proart-tuf/
+- https://wireless.docs.kernel.org/en/latest/en/users/drivers/mediatek.html
+- https://lwn.net/Articles/944390/
 ---
-
 # ASUS ProArt PX13 (HN7306)
 
 ## Model Variants
@@ -184,21 +190,3 @@ From [LinuxQuestions thread](https://www.linuxquestions.org/questions/linux-lapt
 
 ### Best Use Case
 Excellent for sustained workloads if you accept ~53 dB noise under full load. The 65W sustained power and 12-core HX 370 make it the most powerful sub-14" convertible. Good for compilation if noise isn't critical.
-
-### Sources
-
-#### Reviews
-- [NotebookCheck ProArt PX13 Review](https://www.notebookcheck.net/Asus-ProArt-PX13-review-The-world-s-fastest-13-3-inch-2-in-1-thanks-to-AMD-Zen-5-and-RTX-4070-laptop.868429.0.html)
-- [PCWorld ProArt PX13 Review](https://www.pcworld.com/article/2418049/asus-proart-px13-review.html)
-- [UltrabookReview 12-Month Review](https://www.ultrabookreview.com/72323-asus-proart-px13-review/)
-- [Windows Central ProArt PX13](https://www.windowscentral.com/laptops/asus-proart-px13-review)
-- [UltrabookReview Strix Halo laptops](https://www.ultrabookreview.com/74193-asus-strix-halo-laptops-proart-tuf/)
-
-#### Linux
-- [Linux Hardware Database - PX13](https://linux-hardware.org/?probe=c0107457aa)
-- [LinuxQuestions - Ubuntu 24.04 on PX13](https://www.linuxquestions.org/questions/linux-laptop-and-netbook-25/ubuntu-24-04-on-asus-proart-px13-hn7306wi_hn7306wi-4175751777-new/)
-- [MT7925 Driver Documentation](https://wireless.docs.kernel.org/en/latest/en/users/drivers/mediatek.html)
-- [MT7925 kernel support (LWN)](https://lwn.net/Articles/944390/)
-
----
-

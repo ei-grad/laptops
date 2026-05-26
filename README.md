@@ -11,25 +11,29 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 - Noise: <45 dB(A) under load
 - No thermal throttling after heat-soak
 
-## Top Picks
+## Top Picks (May 2026)
 
-| Laptop | CPU | Sustained Power | Weight | Noise |
-|--------|-----|-----------------|--------|-------|
-| **ThinkPad T14 Gen 5/6 AMD** | Ryzen 7 PRO 8840U / AI 7 PRO 360 | 22.5W | 1.46 kg | ~40 dB |
-| **HP EliteBook 845 G11** | Ryzen 7 PRO 8840HS | **41W** | 1.5 kg | Quiet |
-| **ThinkPad T14s Gen 6 AMD** | Ryzen AI 7 PRO 360 | 25W | 1.3 kg | Low |
-| **ASUS ProArt PX13** | Ryzen AI 9 HX 370 | **65W** | 1.39 kg | ~53 dB |
+| Laptop | CPU | Sustained Power | CB R23 Multi | Weight | Noise | Linux |
+|--------|-----|-----------------|-------------|--------|-------|-------|
+| **TUXEDO InfinityBook Pro 14** | HX 370 | **65W** | 22,784 | 1.49 kg | 34 dB | Excellent |
+| **ASUS ProArt PX13** | HX 370 | **65W** | 23,020 | 1.39 kg | 43 dB | Fair |
+| **HP OmniBook Ultra 14** | HX 375 | 47W | 21,812 | 1.53 kg | ~40 dB | Unknown |
+| **HP EliteBook 845 G11** | 8840HS | 41W | — | 1.5 kg | Quiet | Good |
+| **Framework 13 Pro AMD** | HX 370 | ~33W | — | 1.4 kg | ~41 dB | Excellent |
+| **ASUS Zenbook S16 (2026)** | AI 9 465 | 35W | 17,580 | 1.5 kg | 36 dB | Good |
 
 ## Files
 
 - `laptop-research-summary.md` — Quick reference and recommendations
 - `laptop-detailed-reviews.md` — Full review data per model
-- `cpu-comparison.md` — AMD mobile CPU benchmarks (Strix Point, Hawk Point, Strix Halo)
-- `reviews/` — Individual laptop files
+- `cpu-comparison.md` — CPU benchmarks (AMD, Intel, Qualcomm)
+- `reviews/` — Individual laptop review files (with YAML frontmatter)
+- `overviews/` — Thematic overview articles
+- `laptops.jsonl` — Structured data extracted from review frontmatter
 
 ## Key Insight
 
-**Laptop thermal design matters more than CPU SKU.** A well-cooled Hawk Point (8840HS at 41W) outperforms a thermally-limited Strix Point (HX 370 at 28W) in sustained workloads.
+**Laptop thermal design matters more than CPU SKU.** A well-cooled HX 370 at 65W (TUXEDO) delivers 22,784 CB R23 multi, while the same chip at 28W (Zenbook S16) delivers only 15,266 sustained.
 
 ## Sources
 

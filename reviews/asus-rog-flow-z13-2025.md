@@ -5,41 +5,41 @@ manufacturer: ASUS
 status: not_recommended
 form_factor: tablet
 weight_kg: 1.2
-
 display:
+  aspect_ratio: '16:10'
   size_in: 13.4
   touch: true
-  aspect_ratio: "16:10"
-
 variants:
-  - year: 2025
-    cpu:
-      name: AMD Ryzen AI Max+ 395
-      cores: 16
-      threads: 32
-      arch: Strix Halo
-    gpu:
-      name: Radeon 8060S
-      type: integrated
-      compute_units: 40
-    ram_gb: 128
-    ram_type: unified memory
-    power:
-      pl1_w: 60
-      pl2_w: 120
-
+- cpu:
+    arch: Strix Halo
+    cores: 16
+    name: AMD Ryzen AI Max+ 395
+    threads: 32
+  gpu:
+    compute_units: 40
+    name: Radeon 8060S
+    type: integrated
+  power:
+    pl1_w: 60
+    pl2_w: 120
+  ram_gb: 128
+  ram_type: unified memory
+  year: 2025
 noise:
-  performance_dba: 42
   max_dba: 50
-
+  performance_dba: 42
 linux:
-  status: unknown
   issues:
-    - Law firm investigating overheating reports
-    - Random FPS drops requiring reboot
-    - Reports of thermal throttling and sudden shutdowns
+  - Law firm investigating overheating reports
+  - Random FPS drops requiring reboot
+  - Reports of thermal throttling and sudden shutdowns
+  status: unknown
+sources:
+- https://www.tomsguide.com/computing/laptops/gaming-laptops/asus-rog-flow-z13-2025-review
+- https://hothardware.com/reviews/rog-flow-z13-review?page=4
+- https://www.windowscentral.com/hardware/asus/asus-rog-flow-z13-2025-review
+- https://www.rtings.com/laptop/reviews/asus/rog-flow-z13-gz302-2025
 ---
-
 # ASUS ROG Flow Z13 (2025) -- NOT RECOMMENDED
 
 ### Specifications
@@ -68,12 +68,3 @@ linux:
 - Random FPS drops requiring reboot
 - Software/driver instability
 - Compact form factor = thermal compromises
-
-### Sources
-- [Tom's Guide ROG Flow Z13](https://www.tomsguide.com/computing/laptops/gaming-laptops/asus-rog-flow-z13-2025-review)
-- [HotHardware ROG Flow Z13](https://hothardware.com/reviews/rog-flow-z13-review?page=4)
-- [Windows Central ROG Flow Z13](https://www.windowscentral.com/hardware/asus/asus-rog-flow-z13-2025-review)
-- [RTINGS ROG Flow Z13](https://www.rtings.com/laptop/reviews/asus/rog-flow-z13-gz302-2025)
-
----
-

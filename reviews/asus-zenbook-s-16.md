@@ -7,108 +7,114 @@ form_factor: clamshell
 weight_kg: 1.5
 battery_wh: 78
 price_usd: 1300
-
 display:
-  size_in: 16
-  resolution: 2880x1800
+  aspect_ratio: '16:10'
   panel: OLED
   refresh_hz: 120
+  resolution: 2880x1800
+  size_in: 16
   touch: true
-  aspect_ratio: "16:10"
-
 variants:
-  - year: 2024
-    sku: UM5606WA
-    cpu:
-      name: AMD Ryzen AI 9 HX 370
-      cores: 12
-      threads: 24
-      arch: Strix Point
-      boost_ghz: 5.1
-    gpu:
-      name: Radeon 890M
-      type: integrated
-      compute_units: 16
-    ram_gb: 32
-    ram_type: LPDDR5x-7500
-    battery_wh: 78
-    power:
-      pl1_w: 28
-      pl2_w: 33
-    benchmarks:
-      cinebench_r23_multi: 17961
-      cinebench_r23_multi_sustained: 15266
-      cinebench_r23_single: 1965
-      cinebench_2024_multi: 926
-      cinebench_2024_single: 114
-      geekbench6_multi: 13389
-      geekbench6_single: 2828
-
-  - year: 2024
-    sku: UM5606WA-365
-    cpu:
-      name: AMD Ryzen AI 9 365
-      cores: 10
-      threads: 20
-      arch: Strix Point
-      boost_ghz: 5.0
-    gpu:
-      name: Radeon 880M
-      type: integrated
-      compute_units: 12
-    ram_gb: 24
-    ram_type: LPDDR5x
-    battery_wh: 78
-    power:
-      pl1_w: 28
-      pl2_w: 33
-    benchmarks:
-      cinebench_r23_multi: 11462
-      cinebench_r23_single: 1942
-      cinebench_r15_multi: 1724
-
-  - year: 2026
-    sku: UM5606GA
-    cpu:
-      name: AMD Ryzen AI 9 465
-      cores: 10
-      threads: 20
-      arch: Gorgon Point
-      boost_ghz: 5.0
-    gpu:
-      name: Radeon 880M
-      type: integrated
-      compute_units: 12
-    ram_gb: 32
-    ram_type: LPDDR5x-8533
-    battery_wh: 83
-    power:
-      pl1_w: 35
-      pl2_w: 45
-    benchmarks:
-      cinebench_r23_multi: 17580
-      cinebench_r23_single: 1997
-      cinebench_2024_multi: 953
-      cinebench_2024_single: 115
-
+- battery_wh: 78
+  benchmarks:
+    cinebench_2024_multi: 926
+    cinebench_2024_single: 114
+    cinebench_r23_multi: 17961
+    cinebench_r23_multi_sustained: 15266
+    cinebench_r23_single: 1965
+    geekbench6_multi: 13389
+    geekbench6_single: 2828
+  cpu:
+    arch: Strix Point
+    boost_ghz: 5.1
+    cores: 12
+    name: AMD Ryzen AI 9 HX 370
+    threads: 24
+  gpu:
+    compute_units: 16
+    name: Radeon 890M
+    type: integrated
+  power:
+    pl1_w: 28
+    pl2_w: 33
+  ram_gb: 32
+  ram_type: LPDDR5x-7500
+  sku: UM5606WA
+  year: 2024
+- battery_wh: 78
+  benchmarks:
+    cinebench_r15_multi: 1724
+    cinebench_r23_multi: 11462
+    cinebench_r23_single: 1942
+  cpu:
+    arch: Strix Point
+    boost_ghz: 5.0
+    cores: 10
+    name: AMD Ryzen AI 9 365
+    threads: 20
+  gpu:
+    compute_units: 12
+    name: Radeon 880M
+    type: integrated
+  power:
+    pl1_w: 28
+    pl2_w: 33
+  ram_gb: 24
+  ram_type: LPDDR5x
+  sku: UM5606WA-365
+  year: 2024
+- battery_wh: 83
+  benchmarks:
+    cinebench_2024_multi: 953
+    cinebench_2024_single: 115
+    cinebench_r23_multi: 17580
+    cinebench_r23_single: 1997
+    geekbench6_multi: 14562
+    geekbench6_single: 2834
+  cpu:
+    arch: Gorgon Point
+    boost_ghz: 5.0
+    cores: 10
+    name: AMD Ryzen AI 9 465
+    threads: 20
+  gpu:
+    compute_units: 12
+    name: Radeon 880M
+    type: integrated
+  power:
+    pl1_w: 35
+    pl2_w: 45
+  ram_gb: 32
+  ram_type: LPDDR5x-8533
+  sku: UM5606GA
+  year: 2026
 noise:
+  balanced_dba: 36
   idle_dba: 25
   low_power_dba: 30
-  balanced_dba: 36
-  performance_dba: 40
   max_dba: 52.5
-
+  performance_dba: 40
 linux:
-  status: good
-  kernel_min: "6.14"
   boot_params:
-    - amdgpu.dcdebugmask=0x600
+  - amdgpu.dcdebugmask=0x600
   issues:
-    - PSR2-SU deadlocks without boot param
-    - Keyboard backlight broken on Linux
-    - s2idle only, no S3 deep sleep
+  - PSR2-SU deadlocks without boot param
+  - Keyboard backlight broken on Linux
+  - s2idle only, no S3 deep sleep
+  kernel_min: '6.14'
+  status: good
+sources:
+- https://www.notebookcheck.net/The-perfect-everyday-laptop-with-AMD-Ryzen-400-Asus-Zenbook-S16-OLED-review.1221965.0.html
+- https://www.ultrabookreview.com/68996-asus-zenbook-s16-review/
+- https://www.storagereview.com/review/zen5-mobile-performance-the-amd-ryzen-ai-9-hx-370-asus-zenbook-s16-review
+- https://www.notebookcheck.net/Asus-ZenBook-S-16-OLED-laptop-review-Premiere-for-Ryzen-AI-9-365-and-Radeon-880M.885785.0.html
+- https://www.windowscentral.com/hardware/laptops/asus-zenbook-s-16-um5606-review
+- https://wiki.archlinux.org/title/ASUS_Zenbook_UM5606
+- https://www.phoronix.com/review/asus-zenbook-s16-power
+- https://www.trustedreviews.com/reviews/asus-zenbook-s-16-2026
+- https://www.ultrabookreview.com/74512-asus-zenbook-s16-s14/
+- https://hitechcentury.com/asus-zenbook-s16-review-um5606-2026/
 ---
-
 # ASUS Zenbook S 16 (UM5606)
 
 ## Model Variants

@@ -7,43 +7,40 @@ form_factor: clamshell
 weight_kg: 1.44
 battery_wh: 57
 price_usd: 1579
-
 display:
+  aspect_ratio: '16:10'
   size_in: 14.0
-  aspect_ratio: "16:10"
-
 variants:
-  - year: 2025
-    cpu:
-      name: AMD Ryzen AI 9 HX PRO 370
-      cores: 12
-      threads: 24
-      arch: Strix Point
-      boost_ghz: 5.1
-    gpu:
-      name: Radeon 890M
-      type: integrated
-      compute_units: 16
-    ram_gb: 64
-    ram_type: LPDDR5X
-    ram_upgradeable: false
-    power:
-      pl1_w: 36
-      pl2_w: 51
-    benchmarks:
-      cinebench_r23_multi: 18520
-      cinebench_r23_single: 1939
-      geekbench6_multi: 14739
-
+- benchmarks:
+    cinebench_r23_multi: 18520
+    cinebench_r23_single: 1939
+    geekbench6_multi: 14739
+  cpu:
+    arch: Strix Point
+    boost_ghz: 5.1
+    cores: 12
+    name: AMD Ryzen AI 9 HX PRO 370
+    threads: 24
+  gpu:
+    compute_units: 16
+    name: Radeon 890M
+    type: integrated
+  power:
+    pl1_w: 36
+    pl2_w: 51
+  ram_gb: 64
+  ram_type: LPDDR5X
+  ram_upgradeable: false
+  year: 2025
 noise: {}
-
 linux:
-  status: good
   issues:
-    - ThinkPad track record; not specifically tested on this model
-    - Gen 6 reviews report improved cooling vs earlier generations
+  - ThinkPad track record; not specifically tested on this model
+  - Gen 6 reviews report improved cooling vs earlier generations
+  status: good
+sources:
+- https://www.notebookcheck.net/Most-powerful-AMD-14-inch-ThinkPad-with-Ryzen-AI-9-HX-Lenovo-ThinkPad-P14s-Gen-6-AMD-laptop-review.1030845.0.html
 ---
-
 # Lenovo ThinkPad P14s Gen 6 AMD
 
 ## Reassessment

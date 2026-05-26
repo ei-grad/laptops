@@ -7,38 +7,38 @@ form_factor: clamshell
 weight_kg: 1.28
 battery_wh: 75
 price_usd: 1500
-
 display:
-  size_in: 14
+  aspect_ratio: '16:10'
   panel: OLED
-  aspect_ratio: "16:10"
-
+  size_in: 14
 variants:
-  - year: 2026
-    cpu:
-      name: AMD Ryzen AI 9 HX PRO 470
-      cores: 12
-      threads: 24
-      arch: Gorgon Point
-    gpu:
-      name: Radeon 890M
-      type: integrated
-      compute_units: 16
-    ram_gb: 64
-    ram_type: DDR5 SO-DIMM
-    ram_upgradeable: true
-    battery_wh: 75
-    power:
-      pl1_w: 30
-      pl2_w: 45
-
+- battery_wh: 75
+  cpu:
+    arch: Gorgon Point
+    cores: 12
+    name: AMD Ryzen AI 9 HX PRO 470
+    threads: 24
+  gpu:
+    compute_units: 16
+    name: Radeon 890M
+    type: integrated
+  power:
+    pl1_w: 30
+    pl2_w: 45
+  ram_gb: 64
+  ram_type: DDR5 SO-DIMM
+  ram_upgradeable: true
+  year: 2026
 linux:
-  status: unknown
   issues:
-    - Not yet reviewed on Linux
-    - Gorgon Point uses same Zen 5 / RDNA 3.5 as Strix Point, kernel 6.12+ expected
+  - Not yet reviewed on Linux
+  - Gorgon Point uses same Zen 5 / RDNA 3.5 as Strix Point, kernel 6.12+ expected
+  status: unknown
+sources:
+- https://www.notebookcheck.net/New-Lenovo-ThinkPad-T14-Gen-7-and-T16-Gen-5-come-with-75-Wh-battery-Intel-Panther-Lake-or-AMD-Gorgon-Point.1239024.0.html
+- https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_T14_Gen_7_AMD/ThinkPad_T14_Gen_7_AMD_Spec.pdf
+- https://www.ubergizmo.com/2026/03/lenovo-thinkpad-t14-t16-gen-5/
 ---
-
 # Lenovo ThinkPad T14 Gen 7 AMD (Gorgon Point)
 
 **Status:** Announced MWC 2026 (March), available April 2026
@@ -71,11 +71,3 @@ Not yet reviewed. Expect 25-35W range based on chassis design (similar to Gen 5/
 ## Assessment
 
 Strong candidate. The SO-DIMM RAM upgradability + 75 Wh battery + RJ45 Ethernet make this the most practical business ultrabook. Wait for sustained power reviews.
-
-### Sources
-
-- [Notebookcheck: ThinkPad T14 Gen 7 + T16 Gen 5](https://www.notebookcheck.net/New-Lenovo-ThinkPad-T14-Gen-7-and-T16-Gen-5-come-with-75-Wh-battery-Intel-Panther-Lake-or-AMD-Gorgon-Point.1239024.0.html)
-- [Lenovo PSREF: ThinkPad T14 Gen 7 AMD](https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_T14_Gen_7_AMD/ThinkPad_T14_Gen_7_AMD_Spec.pdf)
-- [Ubergizmo: ThinkPad T14 Gen 7 Repairability](https://www.ubergizmo.com/2026/03/lenovo-thinkpad-t14-t16-gen-5/)
-
----

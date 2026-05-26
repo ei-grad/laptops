@@ -7,60 +7,83 @@ form_factor: clamshell
 weight_kg: 1.4
 battery_wh: 74.5
 price_usd: 1199
-
 display:
-  size_in: 13.5
-  resolution: 2880x1920
+  aspect_ratio: '3:2'
+  brightness_nits: 700
+  contrast: 1800
   panel: IPS LTPS
   refresh_hz: 120
-  aspect_ratio: "3:2"
-  brightness_nits: 700
-  contrast: 1800:1
+  resolution: 2880x1920
+  size_in: 13.5
   touch: true
-
 variants:
-  - year: 2026
-    sku: Intel Panther Lake
-    cpu:
-      name: Intel Core Ultra X7 358H
-      cores: 16
-      threads: 16
-      arch: Panther Lake (Intel 18A)
-    gpu:
-      name: Intel Arc (integrated)
-      type: integrated
-    ram_gb: 64
-    ram_type: LPCAMM2 LPDDR5X-7467
-    ram_upgradeable: true
-    power:
-      pl1_w: 28
-      pl2_w: 80
-  - year: 2026
-    sku: AMD Strix Point
-    cpu:
-      name: AMD Ryzen AI 9 HX 370
-      cores: 12
-      threads: 24
-      arch: Strix Point (Zen 5 + Zen 5C)
-    gpu:
-      name: Radeon 890M
-      type: integrated
-      compute_units: 16
-    ram_gb: 64
-    ram_type: DDR5-5600 SO-DIMM
-    ram_upgradeable: true
-    power:
-      pl1_w: 33
-      pl2_w: 46
-
+- cpu:
+    arch: Panther Lake (Intel 18A)
+    cores: 16
+    name: Intel Core Ultra X7 358H
+    threads: 16
+  gpu:
+    name: Intel Arc (integrated)
+    type: integrated
+  power:
+    pl1_w: 28
+    pl2_w: 80
+  ram_gb: 64
+  ram_type: LPCAMM2 LPDDR5X-7467
+  ram_upgradeable: true
+  sku: Intel Panther Lake
+  year: 2026
+- cpu:
+    arch: Strix Point (Zen 5 + Zen 5C)
+    cores: 12
+    name: AMD Ryzen AI 9 HX 370
+    threads: 24
+  gpu:
+    compute_units: 16
+    name: Radeon 890M
+    type: integrated
+  power:
+    pl1_w: 33
+    pl2_w: 46
+  ram_gb: 64
+  ram_type: DDR5-5600 SO-DIMM
+  ram_upgradeable: true
+  sku: AMD Strix Point
+  year: 2026
 linux:
-  status: excellent
-  kernel_min: "6.14"
+  notes:
+  - First Framework laptop Ubuntu Certified by Canonical
   issues:
-    - First Framework laptop Ubuntu Certified by Canonical
-    - Requires Mesa 25.0+ for Intel Arc / Radeon 890M
+  - Requires Mesa 25.0+ for Intel Arc / Radeon 890M
+  kernel_min: '6.14'
+  status: excellent
+sources:
+- https://www.phoronix.com/review/framework-13-amd-strix-point
+- https://www.phoronix.com/review/framework-13-ryzen-ai-power
+- https://www.phoronix.com/news/Framework-Laptop-13-Pro
+- https://www.notebookcheck.net/We-go-hands-on-with-the-Framework-Laptop-13-Pro-and-the-improvements-are-night-and-day.1281339.0.html
+- https://www.notebookcheck.net/Framework-Laptop-13-5-Ryzen-AI-9-review-Skip-the-Intel-version-for-better-performance.997363.0.html
+- https://www.notebookcheck.net/Framework-Laptop-13-Pro-promises-more-battery-life-performance-and-metal.1280024.0.html
+- https://www.notebookcheck.net/Leaving-Apple-MacBook-Pro-for-Framework-Laptop-13-Pro-Over-1-3rd-of-Laptop-13-Pro-buyers-are-reportedly-ex-MacBook-Pro.1283484.0.html
+- https://www.tomshardware.com/laptops/frameworks-overhauled-laptop-13-pro-brings-a-redesigned-chassis-intel-core-ultra-series-3-system-aims-to-be-a-macbook-pro-for-linux-users
+- https://www.pcworld.com/article/3120596/hands-on-with-the-framework-laptop-13-pro-a-killer-upgrade.html
+- https://www.heise.de/en/news/Framework-Laptop-13-Pro-AMD-more-expensive-than-Intel-Ubuntu-pre-installed-11268489.html
+- https://hardware.slashdot.org/story/26/04/21/2019256/framework-laptop-13-pro-is-a-major-overhaul-for-the-modular-upgradeable-laptop
+- https://9to5mac.com/2026/04/22/the-macbook-pro-for-linux-users-both-copies-and-contrasts-with-apple/
+- https://www.notebookcheck.net/Framework-claims-Dell-is-trying-to-derail-Framework-s-marketing-by-sending-influencers-Dell-XPS-laptops.1283482.0.html
+- https://world.hey.com/dhh/the-new-framework-13-hx370-68675e0e
+- https://world.hey.com/dhh/panther-lake-is-the-real-deal-4bd731f1
+- https://news.ycombinator.com/item?id=47852177
+- https://news.ycombinator.com/item?id=47852401
+- https://news.ycombinator.com/item?id=47902816
+- https://community.frame.work/t/introducing-framework-laptop-13-pro/81951
+- https://community.frame.work/t/2026-linux-distro-survey-framework-laptop-13-pro/82459
+- https://www.techrxiv.org/doi/10.36227/techrxiv.176591390.00588709
+- https://frame.work/blog/introducing-framework-laptop-13-pro
+- https://frame.work/laptop13pro
+- https://www.phoronix.com/review/framework-13-amd-linux-2025
+- https://www.phoronix.com/review/amd-ryzen-ai-9-hx-370/3
 ---
-
 # Framework 13 Pro (2026)
 
 **Status:** Announced April 21, 2026. Intel ships June 2026. AMD ships July 2026.
@@ -407,29 +430,3 @@ The Framework 13 Pro is a genuine generational leap over the old Framework 13. T
 **For sustained CPU workloads:** The HX 370 delivers 33W sustained at 80C with ~24W during kernel compilation -- excellent efficiency. The new Pro chassis thermal design should reduce the 15% throttling seen in the old chassis.
 
 **No full independent reviews yet** -- units ship June/July 2026. Current data comes from hands-on previews and testing of the same SoCs in the prior-generation Framework 13 chassis.
-
-### Sources
-
-- [Framework Official: Introducing Laptop 13 Pro](https://frame.work/blog/introducing-framework-laptop-13-pro)
-- [Framework Product Page](https://frame.work/laptop13pro)
-- [Tom's Hardware: Framework 13 Pro Redesign](https://www.tomshardware.com/laptops/frameworks-overhauled-laptop-13-pro-brings-a-redesigned-chassis-intel-core-ultra-series-3-system-aims-to-be-a-macbook-pro-for-linux-users)
-- [PCWorld: Hands-on with Framework 13 Pro](https://www.pcworld.com/article/3120596/hands-on-with-the-framework-laptop-13-pro-a-killer-upgrade.html)
-- [Phoronix: Framework 13 AMD Strix Point Linux](https://www.phoronix.com/review/framework-13-amd-strix-point)
-- [Phoronix: Power & Performance Tuning](https://www.phoronix.com/review/framework-13-ryzen-ai-power)
-- [Phoronix: Linux Distro Comparison](https://www.phoronix.com/review/framework-13-amd-linux-2025)
-- [Phoronix: Framework 13 Pro Announced](https://www.phoronix.com/news/Framework-Laptop-13-Pro)
-- [Phoronix: AMD HX 370 Benchmarks](https://www.phoronix.com/review/amd-ryzen-ai-9-hx-370/3)
-- [NotebookCheck: Hands-on](https://www.notebookcheck.net/We-go-hands-on-with-the-Framework-Laptop-13-Pro-and-the-improvements-are-night-and-day.1281339.0.html)
-- [NotebookCheck: Announcement](https://www.notebookcheck.net/Framework-Laptop-13-Pro-promises-more-battery-life-performance-and-metal.1280024.0.html)
-- [NotebookCheck: Framework 13.5 Ryzen AI 9 Review](https://www.notebookcheck.net/Framework-Laptop-13-5-Ryzen-AI-9-review-Skip-the-Intel-version-for-better-performance.997363.0.html)
-- [NotebookCheck: Ex-MacBook Buyers](https://www.notebookcheck.net/Leaving-Apple-MacBook-Pro-for-Framework-Laptop-13-Pro-Over-1-3rd-of-Laptop-13-Pro-buyers-are-reportedly-ex-MacBook-Pro.1283484.0.html)
-- [Heise: AMD vs Intel Pricing](https://www.heise.de/en/news/Framework-Laptop-13-Pro-AMD-more-expensive-than-Intel-Ubuntu-pre-installed-11268489.html)
-- [DHH: Framework 13 HX370](https://world.hey.com/dhh/the-new-framework-13-hx370-68675e0e)
-- [DHH: Panther Lake Review](https://world.hey.com/dhh/panther-lake-is-the-real-deal-4bd731f1)
-- [HN: Framework 13 Pro Discussion](https://news.ycombinator.com/item?id=47852177)
-- [Framework Community: Announcement Thread](https://community.frame.work/t/introducing-framework-laptop-13-pro/81951)
-- [Framework Community: 2026 Linux Distro Survey](https://community.frame.work/t/2026-linux-distro-survey-framework-laptop-13-pro/82459)
-- [TechRxiv: LPCAMM2 vs SO-DIMM Benchmarking](https://www.techrxiv.org/doi/10.36227/techrxiv.176591390.00588709)
-- [9to5Mac: MacBook Pro for Linux Users](https://9to5mac.com/2026/04/22/the-macbook-pro-for-linux-users-both-copies-and-contrasts-with-apple/)
-
----

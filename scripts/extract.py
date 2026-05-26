@@ -4,12 +4,10 @@
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
-
 import frontmatter
 from pydantic import ValidationError
 
-from models import Laptop
+from .models import Laptop
 
 REVIEWS_DIR = Path(__file__).parent.parent / "reviews"
 OUTPUT_FILE = Path(__file__).parent.parent / "laptops.jsonl"

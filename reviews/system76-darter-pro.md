@@ -5,35 +5,36 @@ manufacturer: System76
 status: available
 form_factor: clamshell
 weight_kg: 1.6
-
 display:
+  aspect_ratio: '16:10'
   size_in: 14
-  aspect_ratio: "16:10"
-
 variants:
-  - year: 2024
-    cpu:
-      name: Intel Core Ultra H-series
-      cores: 14
-      threads: 18
-      arch: Meteor Lake
-    gpu:
-      name: Intel Arc
-      type: integrated
-    ram_gb: 64
-    ram_type: DDR5 SO-DIMM
-    ram_upgradeable: true
-    power:
-      pl1_w: 35
-      pl2_w: 65
-
+- cpu:
+    arch: Meteor Lake
+    cores: 14
+    name: Intel Core Ultra H-series
+    threads: 18
+  gpu:
+    compute_units: 8
+    name: Intel Arc
+    type: integrated
+  power:
+    pl1_w: 35
+    pl2_w: 65
+  ram_gb: 64
+  ram_type: DDR5 SO-DIMM
+  ram_upgradeable: true
+  year: 2024
 linux:
-  status: excellent
   issues:
-    - Bottom of chassis can become uncomfortably hot
-    - Fan noise during compiles described as irritating
+  - Bottom of chassis can become uncomfortably hot
+  - Fan noise during compiles described as irritating
+  status: excellent
+sources:
+- https://gear-report.com/system76-darter-pro-10-darp10-review/
+- https://boilingsteam.com/the-darter-pro-lightweight-linux-laptop-full-review/
+- https://support.system76.com/articles/fan-noise/
 ---
-
 # System76 Darter Pro
 
 ### Specifications
@@ -63,11 +64,3 @@ linux:
 ### Lemur Pro (Not Recommended for Heavy Workloads)
 - U-series CPU (efficiency-focused)
 - Not suitable for sustained compilation workloads
-
-### Sources
-- [Gear Report Darter Pro 10](https://gear-report.com/system76-darter-pro-10-darp10-review/)
-- [Boiling Steam Darter Pro](https://boilingsteam.com/the-darter-pro-lightweight-linux-laptop-full-review/)
-- [System76 Fan Noise Support](https://support.system76.com/articles/fan-noise/)
-
----
-
