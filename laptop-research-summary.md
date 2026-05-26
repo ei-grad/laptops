@@ -122,11 +122,11 @@
 
 ### Announced / Awaiting Reviews
 
-| Model | Weight | Sustained W (est.) | RAM | Key Feature | Status |
+| Model | Weight | Sustained W (est.) | RAM | Comment | Status |
 |-------|--------|-------------------|-----|-------------|--------|
 | **ThinkPad P14s Gen 7 AMD** | 1.29 kg | ~30W est. | 96 GB DDR5 SO-DIMM | HX PRO 470, RJ45, ISV workstation | Needs review |
 | **ASUS ExpertBook P5 G2** | 1.27 kg | **45W** (claimed) | 96 GB DDR5 SO-DIMM | Best perf/weight if claim holds | Announced |
-| **Framework 13 Pro Intel** | 1.4 kg | 28W | 64 GB LPCAMM2 | Best Intel/Linux battery option, slower multi-core | Announced |
+| **Framework 13 Pro Intel** | 1.4 kg | 28W | 64 GB LPCAMM2 | Best Intel/Linux battery option, open firmware | Announced |
 | **ThinkPad T14 Gen 7 AMD** | 1.32 kg | ~25W est. | 96 GB DDR5 SO-DIMM | 75 Wh battery + RJ45, top CPU is AI 7 PRO 450 | Needs review, not HX-class |
 | **ThinkPad T14s Gen 7 AMD** | 1.09 kg | TBD | 64 GB LPDDR5X | Lightest ThinkPad AMD, top CPU is AI 7 PRO 450 | AMD not reviewed |
 | **HP EliteBook X G2a** | **<1 kg** | TBD | 64 GB DDR5-8533 | Lightest AMD business | Thermal concerns |

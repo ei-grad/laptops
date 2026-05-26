@@ -51,6 +51,7 @@ When modifying any data, ensure it stays consistent across all files that refere
 ### Single source of truth
 - **Per-model specs and benchmarks** → `reviews/<slug>.md` frontmatter (authoritative)
 - **Structured data** → `laptops.jsonl` (generated, never edit by hand)
+- **Selection criteria** → `README.md` "Key Criteria" is authoritative for ranking, comparing, and recommending laptops
 - **Summary tables and decision matrix** → `laptop-research-summary.md`
 - **README top picks** → `README.md`
 - **CPU benchmark table** → `cpu-comparison.md`
