@@ -5,7 +5,7 @@ manufacturer: ASUS
 status: recommended
 form_factor: clamshell
 weight_kg: 1.5
-battery_wh: 78
+battery_wh: 83
 price_usd: 1300
 display:
   aspect_ratio: '16:10'
@@ -40,6 +40,8 @@ variants:
   ram_gb: 32
   ram_type: LPDDR5x-7500
   sku: UM5606WA
+  status: available
+  weight_kg: 1.5
   year: 2024
 - battery_wh: 78
   benchmarks:
@@ -62,6 +64,8 @@ variants:
   ram_gb: 24
   ram_type: LPDDR5x
   sku: UM5606WA-365
+  status: available
+  weight_kg: 1.5
   year: 2024
 - battery_wh: 83
   benchmarks:
@@ -87,6 +91,8 @@ variants:
   ram_gb: 32
   ram_type: LPDDR5x-8533
   sku: UM5606GA
+  status: available
+  weight_kg: 1.53
   year: 2026
 noise:
   balanced_dba: 36

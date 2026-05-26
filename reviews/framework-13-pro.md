@@ -32,6 +32,8 @@ variants:
   ram_type: LPCAMM2 LPDDR5X-7467
   ram_upgradeable: true
   sku: Intel Panther Lake
+  status: announced
+  weight_kg: 1.4
   year: 2026
 - cpu:
     arch: Strix Point (Zen 5 + Zen 5C)
@@ -49,6 +51,8 @@ variants:
   ram_type: DDR5-5600 SO-DIMM
   ram_upgradeable: true
   sku: AMD Strix Point
+  status: announced
+  weight_kg: 1.4
   year: 2026
 linux:
   notes:
@@ -86,7 +90,7 @@ sources:
 ---
 # Framework 13 Pro (2026)
 
-**Status:** Announced April 21, 2026. Intel ships June 2026. AMD ships July 2026.
+**Status:** Announced April 21, 2026. Intel Pro configurations ship June 2026; AMD Strix Point availability is region/config dependent and should be treated as pre-review.
 **Price:** From $1,199 (DIY) / $1,499 (pre-built)
 **Last updated:** 2026-05-26
 
@@ -108,7 +112,7 @@ sources:
 | Battery Longevity | 80% capacity after 1,000 cycles | Same |
 | Charger | 100W GaN | Same |
 
-**IMPORTANT: AMD variant uses SO-DIMM DDR5-5600, NOT LPCAMM2.** Only the Intel variant gets LPCAMM2.
+**IMPORTANT: AMD uses SO-DIMM DDR5-5600, NOT LPCAMM2.** Only the Intel Panther Lake Pro configuration gets LPCAMM2.
 
 ## Major Changes from Framework 13 (old)
 
@@ -429,4 +433,4 @@ The Framework 13 Pro is a genuine generational leap over the old Framework 13. T
 
 **For sustained CPU workloads:** The HX 370 delivers 33W sustained at 80C with ~24W during kernel compilation -- excellent efficiency. The new Pro chassis thermal design should reduce the 15% throttling seen in the old chassis.
 
-**No full independent reviews yet** -- units ship June/July 2026. Current data comes from hands-on previews and testing of the same SoCs in the prior-generation Framework 13 chassis.
+**No full independent reviews yet** -- Intel units ship June 2026. Current AMD performance data comes from testing the same HX 370 SoC in the prior-generation Framework 13 chassis.

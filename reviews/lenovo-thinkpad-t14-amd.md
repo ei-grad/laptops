@@ -2,9 +2,9 @@
 model: Lenovo ThinkPad T14 AMD
 slug: lenovo-thinkpad-t14-amd
 manufacturer: Lenovo
-status: available
+status: announced
 form_factor: clamshell
-weight_kg: 1.28
+weight_kg: 1.32
 battery_wh: 75
 price_usd: 1500
 display:
@@ -24,9 +24,11 @@ variants:
     pl1_w: 22.5
     pl2_w: 30
   ram_gb: 32
-  ram_type: DDR5
+  ram_type: DDR5-5600 SO-DIMM
   ram_upgradeable: true
   sku: Gen 5
+  status: available
+  weight_kg: 1.46
   year: 2024
 - cpu:
     arch: Strix Point
@@ -41,27 +43,32 @@ variants:
     pl1_w: 22.5
     pl2_w: 30
   ram_gb: 32
-  ram_type: DDR5
+  ram_type: DDR5-5600 SO-DIMM
   ram_upgradeable: true
   sku: Gen 6
+  status: available
+  weight_kg: 1.46
   year: 2025
 - cpu:
     arch: Gorgon Point
-    cores: 12
-    name: AMD Ryzen AI 9 HX PRO 470
-    threads: 24
+    boost_ghz: 5.1
+    cores: 8
+    name: AMD Ryzen AI 7 PRO 450
+    threads: 16
   gpu:
-    compute_units: 16
-    name: Radeon 890M
+    compute_units: 8
+    name: Radeon 860M
     type: integrated
   battery_wh: 75
   power:
-    pl1_w: 30
-    pl2_w: 45
-  ram_gb: 64
-  ram_type: DDR5 SO-DIMM
+    pl1_w: 25
+    pl2_w: 35
+  ram_gb: 96
+  ram_type: DDR5-5600 SO-DIMM
   ram_upgradeable: true
   sku: Gen 7
+  status: announced
+  weight_kg: 1.32
   year: 2026
 noise:
   balanced_dba: 40
@@ -72,6 +79,7 @@ linux:
   issues:
   - Wi-Fi suspend issue resolved in kernel 6.16
   - Gen 7 not yet reviewed on Linux
+  - Gen 7 top CPU is Ryzen AI 7 PRO 450, not HX PRO 470
   kernel_min: '6.5'
   status: good
 sources:
@@ -105,9 +113,9 @@ sources:
 ## Gen 7 (2026, Gorgon Point)
 
 - **Weight:** 1.28 kg (60 Wh) / 1.32 kg (75 Wh)
-- **CPU:** Up to Ryzen AI 9 HX PRO 470 (12C/24T)
+- **CPU:** Up to Ryzen AI 7 PRO 450 (8C/16T)
 - **Battery:** 60 Wh or **75 Wh** (up from 57 Wh — 31% larger)
-- **RAM:** Up to 64 GB DDR5 SO-DIMM (user-upgradeable)
+- **RAM:** Up to 96 GB DDR5-5600 SO-DIMM (user-upgradeable)
 - **Ports:** 2x Thunderbolt 4, 2x USB-A, HDMI 2.1, RJ45
 
 ### Key Improvements (Gen 7)
@@ -119,9 +127,9 @@ sources:
 
 ### Sustained Power (Gen 7)
 
-Not yet reviewed. Expect 25-35W based on chassis design.
+Not yet reviewed. Expect roughly 25-35W based on chassis design and CPU tier.
 
 ### Assessment
 
 Gen 5/6: proven, stable, best balance of performance/noise/weight.
-Gen 7: most practical business ultrabook (SO-DIMM + 75 Wh + RJ45). Wait for sustained power reviews.
+Gen 7: most practical mainstream business ultrabook (SO-DIMM + 75 Wh + RJ45), but it is not the 12-core HX option. Use P14s Gen 7 AMD for HX PRO 470.

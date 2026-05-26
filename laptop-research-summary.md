@@ -15,98 +15,85 @@
 
 ## Top Recommendations
 
-### 1. Lenovo ThinkPad T14 Gen 5/6 AMD ⭐ BEST OVERALL
+### 1. TUXEDO InfinityBook Pro 14 — BEST OVERALL
 
-**Why:** Best balance of sustained performance, thermals, noise, and Linux support.
-
-| Spec | Value |
-|------|-------|
-| Weight | ~1.46 kg |
-| Sustained Power | 22.5W PL1 |
-| Noise (load) | ~40 dB(A) |
-| Linux | Excellent (kernel 6.5+) |
-
-- Better cooling than T14s (thicker chassis, ~300g heavier)
-- Sustains TDP 2× longer than T14s before dropping
-- Cinebench loop: "Performance remains relatively stable"
-- Profile: **Balanced** or **Performance**
-
-### 2. HP EliteBook 845 G11 — HIGHEST SUSTAINED POWER
+**Why:** Highest confirmed sustained CPU performance with native Linux support and upgradeable RAM.
 
 | Spec | Value |
 |------|-------|
-| Weight | ~1.5 kg |
-| Sustained Power | **41W PL1** |
-| Noise (load) | Quiet (single fan busy under load) |
-| Linux | Good AMD support |
+| Weight | 1.49 kg |
+| Sustained Power | **65W PL1** |
+| Noise | 34.1 dB balanced / 42 dB enthusiast / 46.6 dB max |
+| RAM | 128 GB DDR5 SO-DIMM |
+| Linux | Excellent |
 
-- Impressive 41W sustained (highest in class)
-- "Stable under sustained workloads and on battery"
-- Gets warm but maintains performance
-- Profile: **HP Smart Sense** (auto-switches, 35-41W range)
+- Ryzen AI 9 HX 370 at 65W, CB R23 multi 22,784
+- Stable Cinebench loop, no sustained-load throttling reported
+- Best fit for kernel compilation and PySpark if 1.49 kg is acceptable
 
-### 3. Lenovo ThinkPad T14s Gen 6 AMD — LIGHTEST OPTION
-
-| Spec | Value |
-|------|-------|
-| Weight | **1.3 kg** |
-| Sustained Power | 25W PL1 (Best Performance) |
-| Noise (load) | "Neither extremely hot nor loud" |
-| Linux | Fedora 41 / Ubuntu 24.04+ |
-
-Power profiles:
-- Best Battery: 11W / 14W burst
-- Balanced: 15W / 26W burst
-- **Best Performance: 25W / 32W burst** ← Use this
-
-Trade-off: Thinner = less thermal headroom than T14.
-
-### 4. Framework 13 AMD — BEST LINUX ECOSYSTEM
-
-| Spec | Value |
-|------|-------|
-| Weight | ~1.3 kg |
-| Sustained Power | 35W PL1, 25W avg |
-| Noise (load) | ~41 dB(A) |
-| Linux | Excellent, open-source EC |
-
-- Open firmware allows fan curve tuning
-- LVFS/Fwupd support
-- 15% performance drop in extended Cinebench loops
-- Can hit 100°C (tunable via firmware)
-
-### 5. ASUS ProArt PX13 (HN7306) — FASTEST 13" CONVERTIBLE
+### 2. ASUS ProArt PX13 (2024 HX 370) — FASTEST SMALL CONVERTIBLE
 
 | Spec | Value |
 |------|-------|
 | Weight | 1.39 kg |
-| Sustained Power | **65W PL1** (80W burst) |
-| Noise (load) | ~40-53 dB(A) |
-| Linux | Works (xanmod/OEM kernel) |
+| Sustained Power | **65W PL1** |
+| Noise | 43 dB balanced / ~53 dB max |
+| RAM | 32 GB LPDDR5X soldered |
+| Linux | Fair |
 
-- 12-core HX 370 at 65W sustained — exceptional for 13.3"
-- Cinebench R23: 23,020 multi — fastest sub-14" laptop
-- "Manages to avoid thermal throttling"
-- RTX 4050/4060/4070 dGPU options
-- Profile: **Standard** (Whisper mode too slow)
-- **2026 variant:** Ryzen AI Max+ 395 (Strix Halo), no dGPU, up to 128GB RAM
+- CB R23 multi 23,020, very strong for 13.3"
+- Trade-offs are loud full-load behavior, soldered 32 GB RAM, dGPU complexity, and Linux kernel workarounds
+- 2026 Strix Halo / Max+ 395 version is promising but still needs Linux and sustained-load validation
 
-Trade-off: Gets loud (~53 dB) at full load. 2-in-1 form factor.
-**Linux note:** Stock Ubuntu 24.04 has WiFi/backlight/fan issues. Use xanmod kernel.
-
-### 6. Lenovo Yoga Pro 7 14 AMD — HIGHEST RAW POWER
+### 3. ThinkPad P14s Gen 6 AMD — BEST REVIEWED BUSINESS WORKSTATION
 
 | Spec | Value |
 |------|-------|
-| Weight | ~1.55 kg |
-| Sustained Power | **70W PL1** |
-| Noise (load) | 36 dB (Balanced) / **47 dB** (High Perf) |
-| Linux | Good AMD support |
+| Weight | 1.44 kg |
+| Sustained Power | 36W PL1 |
+| CB R23 Multi | 18,520 |
+| RAM | 64 GB LPDDR5X soldered |
+| Linux | Good |
 
-- 70W sustained is impressive for 14"
-- Avoid High Performance mode unless noise-tolerant
-- 100W adapter insufficient under full load
-- Profile: **Balanced/Adaptive** (~45-50W, quieter)
+- Gen 6 corrected the older P14s noise problem
+- Less raw throughput than TUXEDO/ProArt, but better business-laptop ergonomics
+
+### 4. ASUS Zenbook S 16 — QUIET 16" TRAVEL OPTION
+
+| Spec | Value |
+|------|-------|
+| Weight | ~1.5 kg |
+| Sustained Power | 35W (2026 AI 9 465) |
+| CB R23 Multi | 17,580 |
+| RAM | 32 GB LPDDR5X-8533 soldered |
+| Linux | Good with kernel parameter |
+
+- Strong display and battery, quiet at moderate loads
+- Not a top compilation machine; CPU is 10C/20T and RAM is capped at 32 GB
+
+### 5. Framework 13 AMD — BEST LINUX ECOSYSTEM
+
+| Spec | Value |
+|------|-------|
+| Weight | ~1.3 kg |
+| Sustained Power | ~33W |
+| RAM | 64 GB DDR5 SO-DIMM |
+| Linux | Excellent |
+
+- Open EC, LVFS/fwupd, strong distro coverage
+- Runs hot and has less sustained headroom than the top performers
+
+### 6. HP EliteBook 845 G11 — OLDER STABLE BUSINESS PICK
+
+| Spec | Value |
+|------|-------|
+| Weight | ~1.5 kg |
+| Sustained Power | 41W PL1 |
+| RAM | 32 GB LPDDR5X |
+| Linux | Good |
+
+- Proven Hawk Point system with stable sustained behavior
+- Useful fallback if current HX 370/HX 470 options are unavailable
 
 ## Comparison Table
 
@@ -137,10 +124,11 @@ Trade-off: Gets loud (~53 dB) at full load. 2-in-1 form factor.
 
 | Model | Weight | Sustained W (est.) | RAM | Key Feature | Status |
 |-------|--------|-------------------|-----|-------------|--------|
-| **Framework 13 Pro AMD** | 1.4 kg | ~33W | 64 GB DDR5 SO-DIMM | Ubuntu certified, open firmware | Announced |
-| **Framework 13 Pro Intel** | 1.4 kg | 28W | 64 GB LPCAMM2 | Best Intel efficiency, ~16 hrs battery | Announced |
+| **ThinkPad P14s Gen 7 AMD** | 1.29 kg | ~30W est. | 96 GB DDR5 SO-DIMM | HX PRO 470, RJ45, ISV workstation | Needs review |
 | **ASUS ExpertBook P5 G2** | 1.27 kg | **45W** (claimed) | 96 GB DDR5 SO-DIMM | Best perf/weight if claim holds | Announced |
-| **ThinkPad T14 Gen 7 AMD** | 1.28 kg | 25-35W | 64 GB DDR5 SO-DIMM | 75 Wh battery + RJ45 | Gen 7 not reviewed |
+| **Framework 13 Pro Intel** | 1.4 kg | 28W | 64 GB LPCAMM2 | Best Intel/Linux battery option, slower multi-core | Announced |
+| **ThinkPad T14 Gen 7 AMD** | 1.32 kg | ~25W est. | 96 GB DDR5 SO-DIMM | 75 Wh battery + RJ45, top CPU is AI 7 PRO 450 | Needs review, not HX-class |
+| **ThinkPad T14s Gen 7 AMD** | 1.09 kg | TBD | 64 GB LPDDR5X | Lightest ThinkPad AMD, top CPU is AI 7 PRO 450 | AMD not reviewed |
 | **HP EliteBook X G2a** | **<1 kg** | TBD | 64 GB DDR5-8533 | Lightest AMD business | Thermal concerns |
 
 ### Not Recommended
@@ -150,6 +138,7 @@ Trade-off: Gets loud (~53 dB) at full load. 2-in-1 form factor.
 | ROG Flow Z13 | 1.2 kg | Overheating investigation, inconsistent thermals |
 | Dell Pro 14 Plus | 1.58 kg | Throttles HX 370 to 25W — CB R23 only 12,684 |
 | System76 Darter Pro | 1.6 kg | Hot, noisy during compiles |
+| ThinkPad T14/T14s Gen 7 AMD as HX replacements | 1.09-1.40 kg | They top out at Ryzen AI 7 PRO 450; use P14s Gen 7 for HX PRO 470 |
 
 ## Intel Options (May 2026 Update)
 
@@ -237,12 +226,14 @@ See [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026
 | **Best overall (perf + Linux + RAM)** | **TUXEDO InfinityBook Pro 14** (65W, 128 GB DDR5 SO-DIMM, native Linux) |
 | Best perf/weight ratio | ASUS ProArt PX13 (65W @ 1.39 kg) — Linux needs xanmod kernel |
 | Best value (Linux unverified) | HP OmniBook Ultra 14 (47W, CB R23 21,812, $1,050) |
-| Lightest | ThinkPad T14s G6 AMD (1.1 kg, 25W) |
+| Lightest reviewed AMD | ThinkPad T14s G6 AMD (1.3 kg, 25W) |
+| Lightest announced AMD | ThinkPad T14s Gen 7 AMD (1.09 kg) — only 8C top CPU, needs review |
 | Maximum sustained power (14") | Yoga Pro 7 14 (70W) — but loud (47 dB) |
 | Proven business + benchmarks | ThinkPad P14s Gen 6 (36W, CB R23 18,520, Linux good) |
+| 2026 business watchlist | ThinkPad P14s Gen 7 AMD (HX PRO 470, 96 GB SO-DIMM, RJ45) |
 | Proven/stable thermals | HP EliteBook 845 G11 (41W, Linux good) |
 | Linux ecosystem / repairability | Framework 13 AMD (open EC, LVFS, excellent Linux) |
 | Most RAM (SO-DIMM) | TUXEDO IB Pro 14 (128 GB DDR5 SO-DIMM) |
 | Best 16" all-rounder | ASUS Zenbook S 16 2026 (35W, 83 Wh, quiet) |
 | Best Intel option (announced) | Framework 13 Pro Intel (Panther Lake, LPCAMM2) — ~30% behind AMD |
-| Business + RJ45 + battery (needs review) | ThinkPad T14 Gen 7 AMD (75 Wh, DDR5 SO-DIMM, RJ45) |
+| Business + RJ45 + battery, lower CPU tier | ThinkPad T14 Gen 7 AMD (75 Wh, 96 GB DDR5 SO-DIMM, RJ45, AI 7 PRO 450) |

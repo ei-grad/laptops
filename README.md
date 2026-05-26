@@ -35,10 +35,11 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 
 | Laptop | CPU | Size | Key Feature |
 |--------|-----|------|-------------|
-| **Framework 13 Pro AMD** | HX 370 | 13.5" | 64 GB DDR5 SO-DIMM, open firmware, Ubuntu certified |
 | **Framework 13 Pro Intel** | Core Ultra X7/X9 (Panther Lake) | 13.5" | 64 GB LPCAMM2, ~16 hrs battery, ~30% behind AMD multi-core |
 | **ASUS ExpertBook P5 G2** | HX 470 | 14" | 45W claimed @ 1.27 kg, 96 GB DDR5 SO-DIMM |
-| **ThinkPad T14 Gen 7 AMD** | HX PRO 470 | 14" | 75 Wh battery, DDR5 SO-DIMM, RJ45 |
+| **ThinkPad P14s Gen 7 AMD** | HX PRO 470 | 14" | 96 GB DDR5 SO-DIMM, 75 Wh, RJ45, ISV workstation |
+| **ThinkPad T14 Gen 7 AMD** | AI 7 PRO 450 | 14" | 75 Wh battery, 96 GB DDR5 SO-DIMM, RJ45; not HX-class |
+| **ThinkPad T14s Gen 7 AMD** | AI 7 PRO 450 | 14" | 1.09 kg, 64 GB LPDDR5X; AMD variant not yet reviewed |
 
 ## Files
 

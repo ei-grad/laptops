@@ -5,11 +5,11 @@
 ### Added
 - ASUS Zenbook S 16 (UM5606): `reviews/asus-zenbook-s-16.md` — 28W/35W sustained, 3K OLED, ceraluminum, Linux works with kernel 6.14+ and amdgpu boot param
 - Gorgon Point overview: `overviews/2026-update-gorgon-point.md` — Ryzen AI 400 is a minor Strix Point refresh (+3-5% clocks), not worth upgrading
-- TUXEDO InfinityBook Pro 14 Gen10: `reviews/tuxedo-infinitybook-pro-14-gen10.md` — **65W sustained**, 128 GB upgradeable RAM, native Linux, 1.49 kg, CB R23 22,784
+- TUXEDO InfinityBook Pro 14 Gen10: `reviews/tuxedo-infinitybook-pro-14.md` — **65W sustained**, 128 GB upgradeable RAM, native Linux, 1.49 kg, CB R23 22,784
 - HP OmniBook Ultra 14: `reviews/hp-omnibook-ultra-14.md` — 47W sustained, CB R23 21,812, best value at $1,050
 - ASUS VivoBook S 14 OLED: `reviews/asus-vivobook-s14-oled.md` — lightest HX 370 at 1.31 kg, 54W sustained
-- Lenovo ThinkPad P14s Gen 6 AMD: `reviews/lenovo-thinkpad-p14s-gen-6-amd.md` — HX PRO 370, 36W sustained, reconsidered (Gen 6 improved cooling vs older gens)
-- Lenovo ThinkPad T14 Gen 7 AMD: `reviews/lenovo-thinkpad-t14-gen-7-amd.md` — Gorgon Point PRO, 75 Wh battery, SO-DIMM RAM, announced April 2026
+- Lenovo ThinkPad P14s AMD: `reviews/lenovo-thinkpad-p14s-amd.md` — Gen 6 HX PRO 370 at 36W sustained plus Gen 7 HX PRO 470 / 96 GB SO-DIMM watchlist
+- Lenovo ThinkPad T14 AMD: `reviews/lenovo-thinkpad-t14-amd.md` — Gen 7 Gorgon Point, 75 Wh battery, up to 96 GB SO-DIMM, RJ45
 - HP EliteBook X G2a: `reviews/hp-elitebook-x-g2a.md` — sub-1 kg with Gorgon Point, thermal concerns
 - ASUS ExpertBook P5 G2: announced, claims 45W sustained at 1.27 kg, 96 GB SO-DIMM — needs review verification
 - LPCAMM2 laptops overview: `overviews/lpcamm2-laptops-2026.md` — 12 models tracked, mostly Intel; first AMD LPCAMM2 is ThinkPad P16s Gen 5 (96 GB, June 2026)
@@ -29,6 +29,8 @@
 - `cpu-comparison.md` — added Gorgon Point (HX 470/475, AI 9 465, AI 7 450), Fire Range (9955HX3D/9955HX/9850HX), Gorgon Halo (Max+ PRO 495), new Strix Halo SKUs (Max+ 392/388), Intel Panther Lake/Arrow Lake/Lunar Lake, Qualcomm X Elite/X2 Elite
 - `laptop-research-summary.md` — added Intel section (Framework 13 Pro as best Intel option), Qualcomm status, updated excluded models list, added cross-platform comparison and decision matrix entries
 - ThinkPad P14s AMD — reconsidered: Gen 6 reviews show improved cooling, no longer excluded
+- ThinkPad T14/T14s Gen 7 AMD — corrected CPU ceiling to Ryzen AI 7 PRO 450; HX PRO 470 belongs to P14s Gen 7 AMD
+- Validation tooling — added pytest coverage for generated JSONL freshness and repo-relative Markdown links
 - Linux kernel notes — kernel 6.14 EPP default change, 6.16 amd-pstate improvements, 7.1 dynamic EPP, avoid kernel 6.18/6.19 amdgpu bugs
 
 ### Excluded

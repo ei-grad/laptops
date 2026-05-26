@@ -24,7 +24,8 @@ When adding or updating a review:
 1. Add/update YAML frontmatter at the top of the markdown file
 2. The frontmatter `slug` must match the filename (without `.md`)
 3. Run `uv run python -m scripts.extract` to validate and regenerate JSONL
-4. Commit both the updated `.md` and `laptops.jsonl`
+4. Run `uv run -m pytest` to catch stale generated data and broken internal links
+5. Commit both the updated `.md` and `laptops.jsonl`
 
 ### Frontmatter conventions
 - `status`: recommended | available | not_recommended | announced | excluded
@@ -32,6 +33,7 @@ When adding or updating a review:
 - `linux.notes`: positive attributes (e.g. Ubuntu Certified); `linux.issues`: actual problems
 - `noise.*_dba`: idle (fans off), low_power (whisper/silent), balanced, performance, max (turbo/stress)
 - `power.pl1_w` / `pl2_w`: use float (e.g. 22.5, not 22)
+- `variants[].weight_kg` and `variants[].status`: use these when generations differ materially; top-level fields describe the current/default comparison target
 - `battery_wh` at variant level when it differs between variants; top-level value is the default/base
 - `sources`: list of URLs; move pure-link "Sources" sections from body into frontmatter, keep inline references in text
 
@@ -56,11 +58,12 @@ When modifying any data, ensure it stays consistent across all files that refere
 ### After every data change
 1. Update the review file frontmatter first (source of truth)
 2. Run `uv run python -m scripts.extract` — must pass with no errors
-3. Update `laptop-research-summary.md` tables if the change affects comparison data or recommendations
-4. Update `README.md` top picks if recommendations change
-5. Update `cpu-comparison.md` if new CPU data is added
-6. Update `CHANGELOG.md`
-7. Commit updated `.md` files and `laptops.jsonl` together
+3. Run `uv run -m pytest` — must pass with generated JSONL current and internal links valid
+4. Update `laptop-research-summary.md` tables if the change affects comparison data or recommendations
+5. Update `README.md` top picks if recommendations change
+6. Update `cpu-comparison.md` if new CPU data is added
+7. Update `CHANGELOG.md`
+8. Commit updated `.md` files and `laptops.jsonl` together
 
 ### File organization
 - `reviews/` — one file per model line, NOT per generation. Generations go as `variants` in frontmatter. Example: ThinkPad T14 Gen 5/6/7 → single `lenovo-thinkpad-t14-amd.md`
@@ -73,6 +76,7 @@ When modifying any data, ensure it stays consistent across all files that refere
 - If sustained power is not yet reviewed, use conservative estimates and note "est." in body text
 - Benchmark scores must cite the specific review source — same CPU in different laptops gives different scores
 - RAM details matter: always record `ram_type` (LPDDR5X, DDR5 SO-DIMM, LPCAMM2 — these are not interchangeable), speed grade when known (e.g. DDR5-5600, LPDDR5X-7500), and max capacity. Specify per-variant when Intel/AMD variants differ (e.g. Framework 13 Pro). `ram_upgradeable` is a secondary detail — RAM type, speed, and max capacity are more important for comparison
+- Do not reuse workstation CPU ceilings for mainstream lines with similar chassis names. Example: ThinkPad P14s Gen 7 AMD has HX PRO 470; ThinkPad T14/T14s Gen 7 AMD top out at Ryzen AI 7 PRO 450.
 - Prices: specify currency. `price_usd` in frontmatter is USD; note EUR/other in body text
 
 ### When adding new models

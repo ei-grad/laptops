@@ -36,6 +36,8 @@ linux:
   status: unknown
 sources:
 - https://www.asus.com/laptops/for-work/expertbook/asus-expertbook-p5-g2-14-amd/
+- https://www.asus.com/laptops/for-work/expertbook/asus-expertbook-p5-g2-14-amd/techspec/
+- https://www.asus.com/uk/business/resources/news/asus-announces-amd-based-expertbook-p5-g2/
 - https://wccftech.com/asus-2026-amd-laptops-ryzen-ai-400-ryzen-ai-max-zenbook-expertbook-proart-vivobook/
 ---
 # ASUS ExpertBook P5 G2 (14" AMD)
@@ -57,4 +59,4 @@ sources:
 
 ## Assessment
 
-45W sustained TDP claimed by ASUS in a 1.27 kg chassis. If true, this would be among the best performance-per-kg ratios. DDR5 SO-DIMM upgradeable to 96 GB. Direct competitor to the ThinkPad P14s Gen 7. Needs review to verify the 45W claim.
+ASUS claims up to 45W sustained TDP in a 1.27 kg chassis. If independent reviews confirm that under long CPU loops, this would be among the best performance-per-kg ratios. DDR5 SO-DIMM upgradeable to 96 GB. Direct competitor to the ThinkPad P14s Gen 7. Keep it on the watchlist until sustained-load and Linux behavior are verified.

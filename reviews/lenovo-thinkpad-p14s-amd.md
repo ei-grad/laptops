@@ -2,7 +2,7 @@
 model: Lenovo ThinkPad P14s AMD
 slug: lenovo-thinkpad-p14s-amd
 manufacturer: Lenovo
-status: available
+status: announced
 form_factor: clamshell
 weight_kg: 1.29
 battery_wh: 75
@@ -31,6 +31,8 @@ variants:
   ram_gb: 64
   ram_type: LPDDR5X
   sku: Gen 6
+  status: available
+  weight_kg: 1.44
   year: 2025
 - battery_wh: 75
   cpu:
@@ -49,6 +51,8 @@ variants:
   ram_type: DDR5-5600 SO-DIMM
   ram_upgradeable: true
   sku: Gen 7
+  status: announced
+  weight_kg: 1.29
   year: 2026
 noise: {}
 linux:
@@ -59,6 +63,7 @@ linux:
 sources:
 - https://www.notebookcheck.net/Most-powerful-AMD-14-inch-ThinkPad-with-Ryzen-AI-9-HX-Lenovo-ThinkPad-P14s-Gen-6-AMD-laptop-review.1030845.0.html
 - https://www.notebookcheck.net/Lenovo-launches-new-14-inch-ThinkPad-with-AMD-Gorgon-Point-and-up-to-96-GB-RAM.1251719.0.html
+- https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_P14s_Gen_7_AMD/ThinkPad_P14s_Gen_7_AMD_Spec.PDF
 ---
 
 # Lenovo ThinkPad P14s AMD
@@ -90,4 +95,4 @@ Previous research excluded P14s for "unacceptable noise even silent mode at 24W"
 
 ### Key Difference from T14
 
-Higher RAM ceiling (96 GB vs 64 GB), PCIe 5.0 SSD option, ISV-certified workstation. If you need >64 GB RAM, this is the one.
+The real differentiators are the 12-core HX PRO 470 option, ISV-certified workstation positioning, and stronger CPU-throughput target. T14 Gen 7 AMD now also reaches 96 GB SO-DIMM, but it tops out at Ryzen AI 7 PRO 450; T14s Gen 7 AMD is soldered LPDDR5X and also tops out at Ryzen AI 7 PRO 450.

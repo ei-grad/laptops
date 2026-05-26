@@ -213,7 +213,7 @@ AMD claims this is the first x86 client processor capable of running 300B+ param
 | ASUS Zenbook S16 | HX 370 | ~35W | Well-cooled |
 | Larger gaming | HX 370 | Up to 80W | Best case |
 | ThinkPad T14s G6 | PRO 360 | 25W | Best Performance mode |
-| Yoga Pro 7 14 | AI 7 350 | 70W | Aggressive cooling |
+| Yoga Pro 7 14 | AI 9 365 | 70W | Aggressive cooling |
 
 ### Hawk Point (8840HS/8845HS) — cTDP 20-54W
 
@@ -343,7 +343,7 @@ Fire Range wins raw CPU throughput. Strix Halo wins on integrated GPU and memory
 
 ## Competition: Intel and Qualcomm (May 2026)
 
-Full analysis: [reviews/intel-qualcomm-linux-2026.md](reviews/intel-qualcomm-linux-2026.md)
+Full analysis: [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026.md)
 
 ### Intel DPTF Status Update (2026)
 

@@ -78,11 +78,11 @@ Gorgon Point (Ryzen AI 400 series) launched Q1 2026 as a mid-cycle refresh of St
 
 | Spec | Value |
 |------|-------|
-| CPU | AMD Ryzen AI 5/7/9 PRO 400 (Gorgon Point) |
+| CPU | Up to AMD Ryzen AI 7 PRO 450 (Gorgon Point); no HX PRO 470 |
 | Weight | 1.28 kg (60Wh) / 1.32 kg (75Wh) WLAN |
 | Weight (WWAN) | 1.37 kg (60Wh) / 1.40 kg (75Wh) |
 | Battery | 60 Wh or **75 Wh** (up from 57 Wh max) |
-| RAM | Up to 64 GB DDR5 SO-DIMM (user-upgradeable!) |
+| RAM | Up to 96 GB DDR5-5600 SO-DIMM (user-upgradeable!) |
 | Display | 14" options incl. OLED |
 | Ports | 2x Thunderbolt 4 (USB PD/DP 2.1), 2x USB-A, HDMI 2.1, RJ45 |
 | Charging | 65W USB-C |
@@ -98,7 +98,7 @@ Gorgon Point (Ryzen AI 400 series) launched Q1 2026 as a mid-cycle refresh of St
 
 **Linux:** Not yet reviewed. Gorgon Point uses same Zen 5 / RDNA 3.5 as Strix Point, so kernel 6.12+ should work. The PRO SKUs often get better vPro/firmware support.
 
-**Verdict:** Strong candidate. The SO-DIMM RAM upgradability + 75 Wh battery + RJ45 Ethernet make this the most practical business ultrabook. Wait for sustained power reviews.
+**Verdict:** Strong practical business candidate. The SO-DIMM RAM upgradability + 75 Wh battery + RJ45 Ethernet are excellent, but the top AMD CPU is the 8-core Ryzen AI 7 PRO 450. Do not treat it as the HX PRO 470 performance option; that is the P14s Gen 7 AMD.
 
 ---
 
@@ -108,12 +108,13 @@ Gorgon Point (Ryzen AI 400 series) launched Q1 2026 as a mid-cycle refresh of St
 
 | Spec | Value |
 |------|-------|
-| Weight | **1.1 kg** (lightest T-series ever) |
+| Weight | **1.09 kg** (lightest T-series ever) |
 | Battery | 58 Wh |
 | Display | 14" up to 1800p OLED (VRR 30-120Hz, 500 nits) |
-| RAM | Soldered (not upgradeable) |
+| CPU | Up to Ryzen AI 7 PRO 450 (8C/16T) on AMD |
+| RAM | Up to 64 GB LPDDR5X-8533, soldered (not upgradeable) |
 
-**Note:** AMD variant not yet available. Intel variant already shipping. Weight reduction from 1.3 kg (Gen 6) to 1.1 kg is impressive but may compromise sustained thermals.
+**Note:** AMD variant not yet reviewed. Intel variant already shipping. Weight reduction from 1.3 kg (Gen 6) to 1.09 kg is impressive but may compromise sustained thermals, and the AMD top CPU is lower-tier than P14s Gen 7.
 
 ---
 
@@ -132,7 +133,7 @@ Gorgon Point (Ryzen AI 400 series) launched Q1 2026 as a mid-cycle refresh of St
 | Display | 14" 1200p IPS or 2.8K OLED (120Hz, DCI-P3) |
 | Ports | USB-A, Thunderbolt 4, HDMI, RJ45, nano-SIM, smart card |
 
-**Key difference from T14:** Higher RAM ceiling (96 GB vs 64 GB), PCIe 5.0 SSD option, ISV-certified workstation. Same chassis dimensions. If you need >64 GB RAM, this is the one.
+**Key difference from T14:** 12-core HX PRO 470 option, ISV certification, and the same 96 GB SO-DIMM ceiling as the new T14. If sustained CPU throughput matters more than mainstream T-series positioning, this is the 2026 ThinkPad to wait for reviews on.
 
 ---
 
@@ -413,9 +414,9 @@ Community frustration exists -- AMD can do 16 full Zen 5 cores in the AI Max+ 39
 
 | Model | Weight | CPU | Sustained W | Battery | RAM | Price | Linux |
 |-------|--------|-----|-------------|---------|-----|-------|-------|
-| **ThinkPad T14 Gen 7 AMD** | 1.28 kg | HX Pro 470 | ~25-35W (est) | 75 Wh | 64 GB SO-DIMM | EUR 1,400+ | Expected good |
+| **ThinkPad T14 Gen 7 AMD** | 1.32 kg | AI 7 Pro 450 | ~25W (est) | 75 Wh | 96 GB SO-DIMM | EUR 1,400+ | Expected good |
 | **ThinkPad P14s Gen 7 AMD** | 1.29 kg | HX Pro 470 | ~25-35W (est) | 75 Wh | **96 GB SO-DIMM** | EUR 1,990+ | Expected good |
-| **ThinkPad T14s Gen 7 AMD** | **1.1 kg** | Gorgon Point | TBD | 58 Wh | Soldered | TBD | Not yet avail |
+| **ThinkPad T14s Gen 7 AMD** | **1.09 kg** | AI 7 Pro 450 | TBD | 58 Wh | 64 GB LPDDR5X soldered | TBD | Not yet reviewed |
 | **HP EliteBook X G2a** | **<1 kg** | HX Pro 470 | TBD (concern) | 56/68 Wh | 64 GB | TBD | Unknown |
 | **Framework 13 Pro (AMD)** | 1.4 kg | HX 370 (Strix) | ~33W | **74 Wh** | 64 GB SO-DIMM | $1,199+ | Excellent |
 | **ASUS ZenBook S16** | 1.5 kg | AI 9 465 | **35W** | **83 Wh** | 32 GB | ~$1,300 | Likely good |
@@ -430,27 +431,28 @@ Community frustration exists -- AMD can do 16 full Zen 5 cores in the AI Max+ 39
 
 **Wait-and-see (need reviews):**
 1. **ASUS ExpertBook P5 G2 (14")** -- If 45W sustained claim holds true at 1.27 kg, this is the new champion. 96 GB upgradeable RAM is a bonus.
-2. **ThinkPad T14 Gen 7 AMD** -- The 75 Wh battery + SO-DIMM RAM + RJ45 make it the most complete package. Need sustained power data.
+2. **ThinkPad P14s Gen 7 AMD** -- HX PRO 470, 96 GB SO-DIMM, 75 Wh battery, RJ45, and workstation positioning. Need sustained power data.
 3. **HP EliteBook X G2a** -- Sub-1 kg is tempting but may not sustain high power.
+4. **ThinkPad T14 Gen 7 AMD** -- Practical 75 Wh / RJ45 / 96 GB business laptop, but not a top CPU-throughput candidate because it tops out at AI 7 PRO 450.
 
 **Available now, proven:**
-4. **Framework 13 Pro (AMD)** -- Best Linux ecosystem, 74 Wh, SO-DIMM RAM. HX 370 at ~33W sustained. Ubuntu certified.
-5. **ASUS ZenBook S16** -- 35W sustained, 83 Wh, quiet. Good all-rounder but only 10-core AI 9 465.
+5. **Framework 13 AMD / Framework 13 Pro Intel** -- Best Linux ecosystem; choose AMD for multi-core, Intel Pro for LPCAMM2 and battery.
+6. **ASUS ZenBook S16** -- 35W sustained, 83 Wh, quiet. Good all-rounder but only 10-core AI 9 465.
 
 **High performance (heavier):**
-6. **ASUS ProArt PX13 (2026, Strix Halo)** -- Max+ 395 with 16 cores is raw power at 1.38 kg. But 60 Hz display is a drawback.
+7. **ASUS ProArt PX13 (2026, Strix Halo)** -- Max+ 395 with 16 cores is raw power at 1.38 kg. But 60 Hz display and Linux validation are unresolved.
 
 ### Decision Matrix Update
 
 | Priority | 2026 Best Choice | Status |
 |----------|------------------|--------|
-| Balanced (perf + quiet + weight) | ThinkPad T14 Gen 7 AMD | Needs review |
+| Balanced business workstation | ThinkPad P14s Gen 7 AMD | Needs review |
 | Lightest AMD | HP EliteBook X G2a (<1 kg) | Needs review |
-| Lightest proven Linux | ThinkPad T14s Gen 7 AMD (1.1 kg) | AMD not yet shipping |
-| Best Linux ecosystem | Framework 13 Pro AMD | Available July 2026 |
+| Lightest ThinkPad AMD | ThinkPad T14s Gen 7 AMD (1.09 kg) | AMD not yet reviewed |
+| Best Linux ecosystem | Framework 13 AMD / Framework 13 Pro Intel | Proven / announced |
 | Maximum sustained (ultrabook) | ASUS ExpertBook P5 G2 (45W claimed) | Needs review |
 | Maximum raw cores | ASUS ProArt PX13 Strix Halo (16C) | Available |
-| Most upgradeable RAM | ThinkPad P14s Gen 7 AMD (96 GB) | Available |
+| Most upgradeable RAM | ThinkPad P14s Gen 7 AMD (96 GB) | Needs review |
 | Best battery | ASUS ZenBook S16 (83 Wh) | Available |
 
 ---

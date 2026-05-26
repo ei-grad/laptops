@@ -22,4 +22,4 @@
 - "Unacceptable noise" per user reports
 - Profiles unbalanced vs T14
 - Source: [Fedora Linux on P14s Gen 5](https://www.bovender.de/posts/2024/08/experience-with-running-fedora-linux-on-a-thinkpad-p14s-gen-5/)
-- **Note:** Gen 6 AMD (HX PRO 370) reconsidered — improved cooling, see `reviews/lenovo-thinkpad-p14s-gen-6-amd.md`
+- **Note:** Gen 6 AMD (HX PRO 370) and Gen 7 AMD (HX PRO 470) are reconsidered — improved cooling and stronger specs, see `reviews/lenovo-thinkpad-p14s-amd.md`

@@ -2,7 +2,11 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
+
+LaptopStatus = Literal[
+    "recommended", "available", "not_recommended", "announced", "excluded"
+]
 
 
 class StrictModel(BaseModel):
@@ -43,6 +47,8 @@ class Benchmarks(StrictModel):
 class Variant(StrictModel):
     year: int
     sku: str | None = None
+    status: LaptopStatus | None = None
+    weight_kg: float | None = None
     cpu: CPU
     gpu: GPU | None = None
     ram_gb: int
@@ -50,7 +56,7 @@ class Variant(StrictModel):
     ram_upgradeable: bool = False
     battery_wh: float | None = None
     power: PowerLimits
-    benchmarks: Benchmarks = Benchmarks()
+    benchmarks: Benchmarks = Field(default_factory=Benchmarks)
 
 
 class Display(StrictModel):
@@ -94,9 +100,9 @@ class LinuxCompat(StrictModel):
 
     status: Literal["excellent", "good", "fair", "poor", "unknown"]
     kernel_min: str | None = None
-    boot_params: list[str] = []
-    notes: list[str] = []
-    issues: list[str] = []
+    boot_params: list[str] = Field(default_factory=list)
+    notes: list[str] = Field(default_factory=list)
+    issues: list[str] = Field(default_factory=list)
 
 
 class Laptop(StrictModel):
@@ -104,14 +110,12 @@ class Laptop(StrictModel):
     slug: str
     manufacturer: str
     form_factor: Literal["clamshell", "convertible", "tablet"]
-    status: Literal[
-        "recommended", "available", "not_recommended", "announced", "excluded"
-    ]
+    status: LaptopStatus
     weight_kg: float
     battery_wh: float | None = None
     price_usd: int | None = None
     display: Display
     variants: list[Variant]
-    noise: NoiseLevel = NoiseLevel()
-    linux: LinuxCompat = LinuxCompat(status="unknown")
-    sources: list[str] = []
+    noise: NoiseLevel = Field(default_factory=NoiseLevel)
+    linux: LinuxCompat = Field(default_factory=lambda: LinuxCompat(status="unknown"))
+    sources: list[str] = Field(default_factory=list)
