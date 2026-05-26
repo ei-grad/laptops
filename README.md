@@ -4,8 +4,7 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 
 ## Key Criteria
 
-- Size: ≤14" (max 15")
-- Weight: ≤1.7 kg (max 2.0 kg)
+- Weight: ≤1.6 kg
 - RAM: 32 GB minimum
 - Sustained clocks: ≥2.8 GHz multi-core, no throttling after heat-soak
 - Noise: <45 dB(A) under load
@@ -13,30 +12,33 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 
 ## Top Picks (May 2026)
 
-### AMD (best for sustained multi-core)
+### AMD (reviewed, Linux confirmed)
 
-| Laptop | CPU | Sustained W | CB R23 Multi | Weight | RAM | Linux |
-|--------|-----|-------------|-------------|--------|-----|-------|
-| **TUXEDO InfinityBook Pro 14** | HX 370 | **65W** | 22,784 | 1.49 kg | 128 GB SO-DIMM | Excellent |
-| **ASUS ProArt PX13** | HX 370 | **65W** | 23,020 | 1.39 kg | 32 GB soldered | Fair |
-| **HP OmniBook Ultra 14** | HX 375 | 47W | 21,812 | 1.53 kg | 32 GB soldered | Unknown |
-| **Framework 13 Pro AMD** | HX 370 | ~33W | — | 1.4 kg | 64 GB SO-DIMM | Excellent |
-| **ASUS Zenbook S16** | AI 9 465 | 35W | 17,580 | 1.5 kg | 32 GB soldered | Good |
+| Laptop | CPU | Size | Sustained W | CB R23 Multi | Weight | RAM | Linux |
+|--------|-----|------|-------------|-------------|--------|-----|-------|
+| **TUXEDO InfinityBook Pro 14** | HX 370 | 14" | **65W** | 22,784 | 1.49 kg | 128 GB DDR5 SO-DIMM | Excellent |
+| **ASUS ProArt PX13** | HX 370 | 13.3" | **65W** | 23,020 | 1.39 kg | 32 GB LPDDR5X | Fair ¹ |
+| **ASUS Zenbook S 16** | AI 9 465 | 16" | 35W | 17,580 | 1.5 kg | 32 GB LPDDR5x-8533 | Good |
+| **ThinkPad P14s Gen 6** | HX PRO 370 | 14" | 36W | 18,520 | 1.44 kg | 64 GB LPDDR5X | Good |
+| **Framework 13 AMD** | HX 370 | 13.5" | ~33W | — | 1.3 kg | 64 GB DDR5 SO-DIMM | Excellent |
 
-### Intel (best battery life + LPCAMM2)
+¹ ProArt PX13 needs xanmod kernel; stock Ubuntu has WiFi/backlight/fan issues.
 
-| Laptop | CPU | Weight | RAM | Battery | Linux |
-|--------|-----|--------|-----|---------|-------|
-| **Framework 13 Pro Intel** | Core Ultra X7/X9 (Panther Lake) | 1.4 kg | 64 GB LPCAMM2 | ~16 hrs | Excellent |
+### Promising (strong specs, Linux not yet verified)
 
-~30% behind AMD HX 370 in sustained multi-core, but LPCAMM2 (+52% bandwidth), much better battery life, Ubuntu certified.
+| Laptop | CPU | Size | Sustained W | CB R23 Multi | Weight | RAM | Price |
+|--------|-----|------|-------------|-------------|--------|-----|-------|
+| **ASUS VivoBook S 14 OLED** | HX 370 | 14" | 54W | 21,058 | 1.31 kg | 32 GB LPDDR5X | $1,200 |
+| **HP OmniBook Ultra 14** | HX 375 | 14" | 47W | 21,812 | 1.53 kg | 32 GB LPDDR5X | $1,050 |
 
 ### Awaiting Reviews
 
-| Laptop | CPU | Key Feature |
-|--------|-----|-------------|
-| **ASUS ExpertBook P5 G2** | HX 470 | 45W claimed @ 1.27 kg, 96 GB SO-DIMM |
-| **ThinkPad T14 Gen 7 AMD** | HX PRO 470 | 75 Wh battery, SO-DIMM, RJ45 |
+| Laptop | CPU | Size | Key Feature |
+|--------|-----|------|-------------|
+| **Framework 13 Pro AMD** | HX 370 | 13.5" | 64 GB DDR5 SO-DIMM, open firmware, Ubuntu certified |
+| **Framework 13 Pro Intel** | Core Ultra X7/X9 (Panther Lake) | 13.5" | 64 GB LPCAMM2, ~16 hrs battery, ~30% behind AMD multi-core |
+| **ASUS ExpertBook P5 G2** | HX 470 | 14" | 45W claimed @ 1.27 kg, 96 GB DDR5 SO-DIMM |
+| **ThinkPad T14 Gen 7 AMD** | HX PRO 470 | 14" | 75 Wh battery, DDR5 SO-DIMM, RJ45 |
 
 ## Files
 
