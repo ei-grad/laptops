@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Extract structured laptop data from review frontmatter into JSONL."""
 
+import json
 import sys
 from pathlib import Path
 
@@ -13,7 +14,7 @@ REVIEWS_DIR = Path(__file__).parent.parent / "reviews"
 OUTPUT_FILE = Path(__file__).parent.parent / "laptops.jsonl"
 
 
-def extract_all() -> list[Laptop]:
+def extract_all() -> list[tuple[Laptop, Path]]:
     laptops = []
     errors = []
 
@@ -49,7 +50,7 @@ def extract_all() -> list[Laptop]:
             )
             continue
 
-        laptops.append(laptop)
+        laptops.append((laptop, md_file))
 
     if errors:
         print(f"Validation errors in {len(errors)} file(s):", file=sys.stderr)
@@ -66,10 +67,15 @@ def extract_all() -> list[Laptop]:
     return laptops
 
 
-def write_jsonl(laptops: list[Laptop], output: Path) -> None:
+REPO_URL = "https://github.com/ei-grad/laptops/blob/main"
+
+
+def write_jsonl(laptops: list[tuple[Laptop, Path]], output: Path) -> None:
     with output.open("w") as f:
-        for laptop in laptops:
-            f.write(laptop.model_dump_json() + "\n")
+        for laptop, md_file in laptops:
+            data = laptop.model_dump(mode="json")
+            data["review_url"] = f"{REPO_URL}/reviews/{md_file.name}"
+            f.write(json.dumps(data, ensure_ascii=False) + "\n")
 
 
 def main() -> None:
