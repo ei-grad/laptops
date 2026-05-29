@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-05-28
+
+### Added
+- TUXEDO InfinityBook Pro 15 Gen10: `reviews/tuxedo-infinitybook-pro-15.md` — Tongfang GX5 chassis, 90W cooling capacity, 99 Wh battery, 128 GB DDR5 SO-DIMM, same HX 370 CPU as 14". Excluded (1.77 kg exceeds ≤1.6 kg criterion)
+- Comprehensive TB4/TB5 and eGPU dock overview: `overviews/usb4-docking-linux.md` — 20+ TB5 docks compared, TB4 docks still relevant, eGPU docks with PD (AORUS AI BOX, GPD G1, ROG XG Mobile, Minisforum DEG2), AMD USB4 compatibility (MST issues, kernel regressions), PD requirements, USB-C monitor compatibility, Linux eGPU state
+
+### Updated
+- `CLAUDE.md` — added PD/docking cost rule: laptops with >100W chargers require expensive docks (~$550), note as hidden cost in reviews
+- `README.md` — added docking cost key insight, dock overview link
+- `laptop-research-summary.md` — added InfinityBook Pro 15 to Not Recommended table
+
 ## 2026-05-26
 
 ### Added

@@ -23,3 +23,11 @@
 - Profiles unbalanced vs T14
 - Source: [Fedora Linux on P14s Gen 5](https://www.bovender.de/posts/2024/08/experience-with-running-fedora-linux-on-a-thinkpad-p14s-gen-5/)
 - **Note:** Gen 6 AMD (HX PRO 370) and Gen 7 AMD (HX PRO 470) are reconsidered — improved cooling and stronger specs, see `reviews/lenovo-thinkpad-p14s-amd.md`
+
+### TUXEDO InfinityBook Pro 15 Gen10
+- Weight 1.77 kg exceeds ≤1.6 kg criterion
+- Same Tongfang GX5 barebone as XMG EVO 15, same HX 370 CPU as the recommended 14" sibling
+- Excellent specs: 90W cooling capacity, 99 Wh battery, 128 GB DDR5 SO-DIMM, native Linux
+- 150W charger exceeds 100W PD ceiling of most docks — requires ~$550 TB5 dock for stable single-cable operation
+- Chosen as a work laptop despite weight exclusion (battery, screen size, cooling headroom)
+- See `reviews/tuxedo-infinitybook-pro-15.md`

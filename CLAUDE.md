@@ -43,6 +43,7 @@ When adding or updating a review:
 - Cite sources (NotebookCheck, Phoronix, linux-hardware.org)
 - Track thermal/noise data at different power profiles
 - Always include YAML frontmatter in review files (see existing reviews for format)
+- **PD and docking cost:** Laptops with >100W chargers require expensive docks (~$550, e.g. Lenovo ThinkPad TB5 Smart Dock) for stable single-cable operation — standard 100W docks disconnect under CPU load due to PD voltage drops. Note this as a hidden cost in reviews of such laptops and factor it into recommendations. See `overviews/usb4-docking-linux.md` for details
 
 ## Consistency Rules
 

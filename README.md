@@ -45,8 +45,8 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 
 - [`laptop-research-summary.md`](laptop-research-summary.md) — Quick reference, comparison tables, decision matrix
 - [`cpu-comparison.md`](cpu-comparison.md) — CPU benchmarks (AMD, Intel, Qualcomm)
-- [`reviews/`](reviews/) — Individual laptop reviews with YAML frontmatter (16 models)
-- [`overviews/`](overviews/) — Platform comparisons, LPCAMM2 guide, excluded models
+- [`reviews/`](reviews/) — Individual laptop reviews with YAML frontmatter (17 models)
+- [`overviews/`](overviews/) — Platform comparisons, LPCAMM2 guide, [TB4/TB5 and eGPU docks](overviews/usb4-docking-linux.md), excluded models
 - [`laptops.jsonl`](laptops.jsonl) — Structured data extracted from review frontmatter
 
 ## Key Insights
@@ -56,6 +56,8 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 **AMD dominates sustained multi-core under Linux.** Intel Panther Lake is competitive on efficiency and battery but ~30% behind in throughput. Qualcomm is not viable for Linux (no KVM, Tiger Lake-level performance).
 
 **LPCAMM2 is mostly Intel-only** (as of mid-2026). First AMD LPCAMM2 laptop: ThinkPad P16s Gen 5 (June 2026).
+
+**Laptops with >100W chargers need expensive docks.** Standard 100W USB-C docks disconnect under CPU load due to PD voltage drops. A ThinkPad TB5 Smart Dock (~$550) or similar 140W+ dock is required for stable single-cable operation — factor this into TCO. See [`overviews/usb4-docking-linux.md`](overviews/usb4-docking-linux.md).
 
 ## Sources
 
