@@ -3,7 +3,13 @@
 ## 2026-06-02
 
 ### Added
+- Strix Halo overview: `overviews/strix-halo-linux.md` — full catalog of AMD Ryzen AI Max / Max+ laptops (June 2026): HP ZBook Ultra G1a, ROG Flow Z13, ProArt PX13, ASUS TUF A14, Lenovo Yoga Pro 7a / Legion 7a, MetaMech 16; mini-PC/handheld exclusions; platform Linux status (kernel 6.14+/Mesa 25, IR webcam needs ISP4 ~6.18, NPU/ROCm caveats on gfx1151); why Strix Halo is overkill for CPU-bound compilation (iGPU/256 GB/s bandwidth wasted)
+- HP ZBook Ultra G1a 14: `reviews/hp-zbook-ultra-g1a.md` — Ryzen AI Max+ PRO 395, 66W sustained, CB R23 30,706 (highest in set), 128 GB LPDDR5X, 1.586 kg, Ubuntu 24.04 certified (Linux good). Status available; held back from recommended by ~48 dB load noise, soldered RAM, ~$4,000, 140W charger needing a dock
 - ODM barebones overview: `overviews/odm-barebones-linux.md` — maps Linux laptop brands to their underlying Tongfang/Uniwill and Clevo chassis (2024-2026). Clarifies Uniwill = Tongfang (one ODM), Clevo = separate; GX4 = 14" / GX5 = 15.3"; confirmed twins (IB Pro 14 ≡ XMG EVO 14 ≡ Tongfang GX4; Darter Pro darp11 ≡ Clevo V560TU); brand→ODM table (TUXEDO, System76, NovaCustom, XMG/Schenker, Eluktronics, Sager, etc.); per-chassis Linux/PD notes
+
+### Updated
+- ASUS ProArt PX13 — 2026 GoPro Edition (Strix Halo Max+ 395) now independently reviewed: 70W sustained (Performance), CB R23 30,403 (10-min), GB6 18,956 multi, 1.39 kg (**lightest reviewed Strix Halo**), 128 GB LPDDR5X-8000. Linux fair — needs kernel 7.0 mainline (ACP70 audio quirks landed 2026-03-16), boot params, and manual TAS2783 speaker-firmware extraction. Frontmatter 2026 variant updated with real benchmarks/power
+- Strix Halo overview — refreshed review statuses: PX13 GoPro and ASUS TUF A14 (Max+ 392, 1.48 kg) moved from announced to reviewed; clarified the reviewed Legion 7a **16"** is Gorgon Point HX 470 (not Strix Halo) while the 15.3" Strix Halo Legion 7a is still forthcoming; confirmed **no Chinese laptop barebones** on Max+ 395 (China activity is mini-PCs / AI Halo Box / Mini AI Workstations, plus the finished MetaMech 16 laptop)
 
 ## 2026-05-28
 

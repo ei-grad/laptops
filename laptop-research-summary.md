@@ -101,6 +101,8 @@
 
 | Model | Weight | Sustained W | CB R23 Multi | Noise (balanced) | RAM | Linux |
 |-------|--------|-------------|-------------|-----------------|-----|-------|
+| **HP ZBook Ultra G1a 14** | 1.586 kg | **66W** | **30,706** | ~45 dB ² | 128 GB LPDDR5X | Good ² |
+| **ASUS ProArt PX13 GoPro** | 1.39 kg | **70W** | **30,403** | ~40 dB ³ | 128 GB LPDDR5X | Fair ³ |
 | **TUXEDO InfinityBook Pro 14** | 1.49 kg | **65W** | **22,784** | 34 dB | 128 GB DDR5 SO-DIMM | **Excellent** |
 | **ASUS ProArt PX13** | 1.39 kg | **65W** | 23,020 | 43 dB | 32 GB LPDDR5X | Fair ¹ |
 | **ASUS Zenbook S 16 (2026)** | 1.5 kg | 35W | 17,580 | 36 dB | 32 GB LPDDR5x-8533 | Good |
@@ -111,7 +113,9 @@
 | **ThinkPad T14s G6 AMD** | 1.3 kg | 25W | — | ~38 dB | 32 GB LPDDR5X-7500 | Good |
 | **Yoga Pro 7 14 AMD** | 1.55 kg | **70W** | — | 36 dB | 32 GB LPDDR5X | Unknown |
 
-¹ ProArt PX13 needs xanmod kernel; stock Ubuntu has WiFi/backlight/fan issues.
+¹ ProArt PX13 (2024 HX 370) needs xanmod kernel; stock Ubuntu has WiFi/backlight/fan issues.
+² HP ZBook Ultra G1a: Ubuntu-certified, CPU fully supported on kernel 6.14+. Noise ~44–45 dB in normal use, ~48 dB peak (HotHardware at 12"/30 cm — reads ~3–4 dB low vs the 15 cm lab standard) — same class as the TUXEDO 15, not a disqualifier. Held back mainly by ~$4,000 price and soldered RAM (vs upgradeable SO-DIMM), plus a 140W charger needing a dock. Strix Halo iGPU/bandwidth wasted on compilation — see [Strix Halo overview](overviews/strix-halo-linux.md). ([review notes](reviews/hp-zbook-ultra-g1a.md))
+³ ASUS ProArt PX13 GoPro Edition (2026 Strix Halo Max+ 395): lightest reviewed Strix Halo at 1.39 kg, ~$3,000, CB R23 30,403 (10-min). Noise by mode — Silent <35 / Standard 38-42 / Performance 45-48 / Manual 49-52 dB. Linux **fair**: needs kernel 7.0 mainline (ACP70 quirks landed 2026-03-16), boot params, and manual TAS2783 speaker-firmware extraction. 60 Hz OLED, 200W charger → dock. ([review notes](reviews/asus-proart-px13.md))
 
 ### Promising (strong specs, Linux not yet verified)
 
@@ -225,6 +229,8 @@ See [overviews/intel-qualcomm-linux-2026.md](overviews/intel-qualcomm-linux-2026
 | Priority | Best Choice |
 |----------|-------------|
 | **Best overall (perf + Linux + RAM)** | **TUXEDO InfinityBook Pro 14** (65W, 128 GB DDR5 SO-DIMM, native Linux) |
+| Maximum sustained multi-core (Linux) | HP ZBook Ultra G1a (Max+ PRO 395, 66W, CB R23 30,706, Ubuntu-certified) — but ~$4,000 and soldered RAM |
+| Lightest / cheapest reviewed Strix Halo | ASUS ProArt PX13 GoPro (Max+ 395, 1.39 kg, ~$3,000, CB R23 30,403) — Linux fair (kernel 7.0 + manual firmware) |
 | Best perf/weight ratio | ASUS ProArt PX13 (65W @ 1.39 kg) — Linux needs xanmod kernel |
 | Best value (Linux unverified) | HP OmniBook Ultra 14 (47W, CB R23 21,812, $1,050) |
 | Lightest reviewed AMD | ThinkPad T14s G6 AMD (1.3 kg, 25W) |

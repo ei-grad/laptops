@@ -227,9 +227,12 @@ AMD claims this is the first x86 client processor capable of running 300B+ param
 
 | Laptop | CPU | Sustained Power | Notes |
 |--------|-----|-----------------|-------|
+| **HP ZBook Ultra G1a 14** | Max+ PRO 395 | **66W** | 14" workstation; CB R23 ~29,200 sustained, Ubuntu-certified |
+| **ASUS ProArt PX13 GoPro** | Max+ 395 | **70W** (Performance) | 13.3" convertible; CB R23 30,403 (10-min), 1.39 kg; Manual mode 95W/115W |
 | ROG Flow Z13 | Max+ 395 | ~80W | Tablet form factor |
-| ASUS ProArt P16 | Max+ 395 | ~100W | Workstation |
 | Full-size gaming | Max+ 395 | 100-120W | Maximum performance |
+
+See [Strix Halo on Linux overview](overviews/strix-halo-linux.md) for the full laptop catalog and Linux support status.
 
 ---
 

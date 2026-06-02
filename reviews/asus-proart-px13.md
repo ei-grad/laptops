@@ -36,7 +36,13 @@ variants:
   ram_type: LPDDR5X
   sku: HN7306WV
   year: 2024
-- cpu:
+- benchmarks:
+    cinebench_r23_multi: 30841
+    cinebench_r23_multi_sustained: 30403
+    cinebench_2024_multi: 1642
+    geekbench6_multi: 18956
+    geekbench6_single: 2938
+  cpu:
     arch: Strix Halo
     cores: 16
     name: AMD Ryzen AI Max+ 395
@@ -46,11 +52,11 @@ variants:
     name: Radeon 8060S
     type: integrated
   power:
-    pl1_w: 65
-    pl2_w: 80
+    pl1_w: 70.0
+    pl2_w: 95.0
   ram_gb: 128
-  ram_type: unified memory
-  sku: HN7306
+  ram_type: LPDDR5X-8000
+  sku: HN7306 (GoPro Edition)
   year: 2026
 noise:
   balanced_dba: 43
@@ -73,6 +79,9 @@ sources:
 - https://www.ultrabookreview.com/72323-asus-proart-px13-review/
 - https://www.windowscentral.com/laptops/asus-proart-px13-review
 - https://www.ultrabookreview.com/74193-asus-strix-halo-laptops-proart-tuf/
+- https://www.ultrabookreview.com/74980-asus-proart-px13-gopro-review/
+- https://www.techpowerup.com/review/asus-proart-gopro-edition-px13/
+- https://gist.github.com/cryptob1/f62aaf8517df2e540f447347f42c7a03
 - https://wireless.docs.kernel.org/en/latest/en/users/drivers/mediatek.html
 - https://lwn.net/Articles/944390/
 ---
@@ -85,11 +94,13 @@ sources:
 - **GPU:** NVIDIA RTX 4050/4060/4070 Laptop
 - **RAM:** Up to 32GB LPDDR5X (soldered)
 
-### 2026: HN7306 (Strix Halo)
-- **CPU:** AMD Ryzen AI Max+ 395 (Strix Halo, 16C/32T)
+### 2026: HN7306 GoPro Edition (Strix Halo) — reviewed
+- **CPU:** AMD Ryzen AI Max+ 395 (Strix Halo, 16C/32T); Max+ 388 entry config
 - **GPU:** Integrated Radeon 8060S (40 CU) — no dGPU
-- **RAM:** Up to 128GB unified memory
+- **RAM:** Up to 128GB LPDDR5X-8000 unified memory (soldered)
 - **NPU:** 50 TOPS
+- 70W sustained (Performance), CB R23 30,403 (10-min) — lightest reviewed Strix Halo at 1.39 kg
+- See the [2026 GoPro Edition section](#2026-gopro-edition-strix-halo--reviewed) below for full data
 
 ---
 
@@ -167,12 +178,42 @@ From [LinuxQuestions thread](https://www.linuxquestions.org/questions/linux-lapt
 - **linux-oem-24.04c:** Fixed keyboard backlight, stabilized fan, no hangs
 - **xanmod kernel:** Fixed HDMI output, improved WiFi
 
-#### 2026 Model (Strix Halo) Considerations
+#### 2026 GoPro Edition (Strix Halo) — Reviewed
 
-- AMD GPU driver should work (open source amdgpu)
-- NPU support may be limited initially
-- Kernel 6.12+ recommended for Strix Halo
-- No dGPU simplifies driver setup
+The 2026 refresh (marketed as the **ProArt PX13 GoPro Edition**) drops the NVIDIA dGPU for
+the Ryzen AI Max+ 395's integrated Radeon 8060S (40 CU) and up to 128 GB LPDDR5X-8000
+unified memory. Independently reviewed (UltrabookReview / TechPowerUp / TrustedReviews),
+it is now one of only a handful of Strix Halo laptops with real sustained data — and at
+**1.39 kg it is the lightest reviewed Strix Halo laptop**, lighter than the
+[HP ZBook Ultra G1a](./hp-zbook-ultra-g1a.md) (1.586 kg).
+
+- **Sustained power:** Silent 35W → Standard 50-60W → **Performance 70W** → Manual 95W
+  sustained / 115W burst. Default Performance mode holds 70W with minimal throttle.
+- **CB R23 multi:** 30,841 peak / **30,403 over 10 min** — essentially matching the ZBook
+  (29,203 sustained) in a smaller, lighter, cheaper chassis.
+- **CB 2024 multi:** 1,642. **Geekbench 6:** 2,938 single / 18,956 multi.
+- **Noise:** Silent <35 dBA, Standard 38-42, **Performance 45-48**, Manual 49-52 dBA (at
+  head level). Performance mode just exceeds the 45 dB target; Standard mode stays under.
+- **Charger:** 200W barrel (USB-C PD up to 100W) — >100W, so the dock caveat applies, see
+  [USB4 Docking](../overviews/usb4-docking-linux.md).
+- **Price:** ~$2,999 / ~€3,200 (Max+ 395); a Max+ 388 entry config is ~$1,899.
+
+**Linux (Strix Halo variant) — needs bleeding-edge kernel:**
+
+- **Kernel 7.0 mainline is required.** Stock 6.19.x lacks the **AMD ACP70 PX13 audio
+  quirks**, which landed in mainline on **2026-03-16**.
+- For full 128 GB unified-memory GPU allocation, boot params:
+  `iommu=pt amdgpu.gttsize=126976 ttm.pages_limit=32505856` (raises GTT to ~124 GiB).
+- **Internal speakers (TAS2783)** work but need manual firmware-blob extraction from the
+  Windows driver (`1714-1-8.bin`, `1714-1-B.bin`) — not yet in linux-firmware.
+- Headphone jack (RT721), HDMI audio, Bluetooth audio all work. Automatic headphone-jack
+  detection does not (manual sink switching); PDM microphone array untested.
+- iGPU (amdgpu/gfx1151), CPU, NVMe, Wi-Fi 7 (MT7925) work on recent kernels.
+
+This is a **fair** Linux story — strong hardware, but it needs a 7.0 mainline kernel,
+boot params, and a manual firmware-extraction step for speakers. The ZBook Ultra G1a
+(Ubuntu-certified) remains the better turnkey Linux Strix Halo machine; the PX13 wins on
+weight and price. See the [Strix Halo overview](../overviews/strix-halo-linux.md).
 
 #### Hardware Probe Data
 

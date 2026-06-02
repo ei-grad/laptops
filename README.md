@@ -21,8 +21,12 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 | **ASUS Zenbook S 16** | AI 9 465 | 16" | 35W | 17,580 | 1.5 kg | 32 GB LPDDR5x-8533 | Good |
 | **ThinkPad P14s Gen 6** | HX PRO 370 | 14" | 36W | 18,520 | 1.44 kg | 64 GB LPDDR5X | Good |
 | **Framework 13 AMD** | HX 370 | 13.5" | ~33W | — | 1.3 kg | 64 GB DDR5 SO-DIMM | Excellent |
+| **HP ZBook Ultra G1a 14** | Max+ PRO 395 | 14" | **66W** | **30,706** | 1.586 kg | 128 GB LPDDR5X | Good ² |
+| **ASUS ProArt PX13 GoPro** | Max+ 395 | 13.3" | **70W** | **30,403** | **1.39 kg** | 128 GB LPDDR5X | Fair ³ |
 
-¹ ProArt PX13 needs xanmod kernel; stock Ubuntu has WiFi/backlight/fan issues.
+¹ ProArt PX13 (2024 HX 370) needs xanmod kernel; stock Ubuntu has WiFi/backlight/fan issues.
+² Ubuntu-certified, CPU work fully supported on kernel 6.14+. **Highest sustained multi-core in the set.** Held back from a top pick mainly by **price (~$4,000) and soldered RAM** (vs the TUXEDO 14's upgradeable 128 GB SO-DIMM), plus a 140W charger needing a dock. Noise (~48 dB peak) is in the same class as other high-power machines here, not a disqualifier. Strix Halo's iGPU/bandwidth is wasted on compilation — see [Strix Halo overview](overviews/strix-halo-linux.md).
+³ ProArt PX13 GoPro Edition (2026 Strix Halo): **lightest reviewed Strix Halo (1.39 kg)**, ~$3,000, CB R23 30,403 (10-min) — essentially matches the ZBook in a smaller/cheaper chassis. Linux **fair**: needs a 7.0 mainline kernel, boot params, and manual speaker-firmware extraction; 60 Hz OLED; 200W charger → dock. See [Strix Halo overview](overviews/strix-halo-linux.md).
 
 ### Promising (strong specs, Linux not yet verified)
 
@@ -45,8 +49,8 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 
 - [`laptop-research-summary.md`](laptop-research-summary.md) — Quick reference, comparison tables, decision matrix
 - [`cpu-comparison.md`](cpu-comparison.md) — CPU benchmarks (AMD, Intel, Qualcomm)
-- [`reviews/`](reviews/) — Individual laptop reviews with YAML frontmatter (17 models)
-- [`overviews/`](overviews/) — Platform comparisons, LPCAMM2 guide, [TB4/TB5 and eGPU docks](overviews/usb4-docking-linux.md), excluded models
+- [`reviews/`](reviews/) — Individual laptop reviews with YAML frontmatter (18 models)
+- [`overviews/`](overviews/) — Platform comparisons, LPCAMM2 guide, [Strix Halo on Linux](overviews/strix-halo-linux.md), [TB4/TB5 and eGPU docks](overviews/usb4-docking-linux.md), excluded models
 - [`laptops.jsonl`](laptops.jsonl) — Structured data extracted from review frontmatter
 
 ## Key Insights
@@ -56,6 +60,8 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 **AMD dominates sustained multi-core under Linux.** Intel Panther Lake is competitive on efficiency and battery but ~30% behind in throughput. Qualcomm is not viable for Linux (no KVM, Tiger Lake-level performance).
 
 **LPCAMM2 is mostly Intel-only** (as of mid-2026). First AMD LPCAMM2 laptop: ThinkPad P16s Gen 5 (June 2026).
+
+**Strix Halo is overkill for compilation.** The Ryzen AI Max+ 395's value is its 40-CU iGPU and 256 GB/s unified memory (local LLMs, GPU compute) — wasted on CPU-bound compilation/PySpark. Two reviewed models meet the weight criterion: the HP ZBook Ultra G1a (1.586 kg, Ubuntu-certified, turnkey Linux) and the lighter/cheaper ASUS ProArt PX13 GoPro (1.39 kg, but Linux needs a 7.0 kernel + manual firmware). The rest are heavy/loud gaming or unvalidated on Linux. See [Strix Halo on Linux](overviews/strix-halo-linux.md).
 
 **Laptops with >100W chargers need expensive docks.** Standard 100W USB-C docks disconnect under CPU load due to PD voltage drops. A ThinkPad TB5 Smart Dock (~$550) or similar 140W+ dock is required for stable single-cable operation — factor this into TCO. See [`overviews/usb4-docking-linux.md`](overviews/usb4-docking-linux.md).
 
