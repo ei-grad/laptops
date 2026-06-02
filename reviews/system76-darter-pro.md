@@ -42,6 +42,7 @@ sources:
 - **Weight:** ~1.6 kg (14") / ~1.9 kg (16")
 - **CPU:** Intel Core Ultra H-series
 - **Firmware:** Coreboot (open-source)
+- **Chassis:** Clevo **V560TU** (darp11); see [ODM barebones overview](../overviews/odm-barebones-linux.md)
 
 ### Thermal Behavior
 - Fan ramps at 65-70°C, max at 90°C

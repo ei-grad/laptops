@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-06-02
+
+### Added
+- ODM barebones overview: `overviews/odm-barebones-linux.md` — maps Linux laptop brands to their underlying Tongfang/Uniwill and Clevo chassis (2024-2026). Clarifies Uniwill = Tongfang (one ODM), Clevo = separate; GX4 = 14" / GX5 = 15.3"; confirmed twins (IB Pro 14 ≡ XMG EVO 14 ≡ Tongfang GX4; Darter Pro darp11 ≡ Clevo V560TU); brand→ODM table (TUXEDO, System76, NovaCustom, XMG/Schenker, Eluktronics, Sager, etc.); per-chassis Linux/PD notes
+
 ## 2026-05-28
 
 ### Added

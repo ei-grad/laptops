@@ -55,7 +55,7 @@ sources:
 
 ## Overview
 
-Same Tongfang GX5 barebone as XMG EVO 15 (E25) / Schenker Vision 15. Ships with TUXEDO OS (Ubuntu-based) or Ubuntu 24.04. 15.3" sibling of the [InfinityBook Pro 14](./tuxedo-infinitybook-pro-14.md).
+Same Tongfang **GX5** barebone as XMG EVO 15 (E25 AMD / M25 Intel) / Schenker Vision 15. Ships with TUXEDO OS (Ubuntu-based) or Ubuntu 24.04. 15.3" sibling of the [InfinityBook Pro 14](./tuxedo-infinitybook-pro-14.md) (Tongfang GX4). See [ODM barebones overview](../overviews/odm-barebones-linux.md) for the full brand↔chassis mapping.
 
 ## Sustained Performance
 

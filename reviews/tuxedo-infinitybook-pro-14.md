@@ -51,7 +51,7 @@ sources:
 
 ## Overview
 
-Same barebone as XMG Evo 14 (E25) / Schenker Vision 14. Ships with TUXEDO OS (Ubuntu-based) or Ubuntu. Native Linux support with everything working out of the box.
+Same barebone as XMG Evo 14 (E25) / Schenker Vision 14 — Tongfang **GX4** (`X4SP4NAL`). Ships with TUXEDO OS (Ubuntu-based) or Ubuntu. Native Linux support with everything working out of the box. See [ODM barebones overview](../overviews/odm-barebones-linux.md) for the full brand↔chassis mapping.
 
 ## Sustained Performance
 
