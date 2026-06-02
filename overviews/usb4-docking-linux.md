@@ -5,7 +5,7 @@
 | | Thunderbolt 4 | Thunderbolt 5 |
 |--|--|--|
 | Bandwidth | 40 Gbps (PCIe 3.0 x4) | 80 Gbps (PCIe 4.0 x4), 120 Gbps asymmetric for display |
-| PD max | 100W (PD 3.0) | 240W (PD 3.1 EPR); most docks deliver 140W |
+| PD | 100W max (PD 3.0) | 140-240W (PD 3.1 EPR); most docks deliver 140W, Lenovo 7500 delivers 180W |
 | Display | DP 1.4 — dual 4K@60Hz | DP 2.1 — triple 4K@144Hz or dual 8K@60Hz |
 | AMD compat | AMD USB4 (40 Gbps) — works, some MST issues | Falls back to USB4 speeds (40 Gbps); PD and tunneling work |
 | Price range | $200-400 | $300-650 |
@@ -29,7 +29,7 @@ AMD laptops with >100W chargers disconnect from most docks under sustained CPU l
 
 | Dock | Price | PD | Adapter | TB5 ↓ | HDMI | DP | USB-A | USB-C | Ethernet | M.2 | Notes |
 |------|------:|----:|--------:|------:|-----:|---:|------:|------:|---------:|----:|-------|
-| **Plugable TBT-UDT3** | $300 | 140W | 180W | 3 | — | — | 3 | — | 2.5G | — | Best value; PCWorld Editor's Choice |
+| **Plugable TBT-UDT3** | $300 | 140W | 180W | 3 | — | — | 3 | — | 2.5G | — | PCWorld Editor's Choice |
 | **Kensington SD5000T5** | $300 | 140W | 180W | 3 | — | — | 3 | — | 2.5G | — | Early TB5 dock; one port 60W |
 | **WAVLINK UTD58** | $300 | 140W | 180W | 3 | — | — | 4 | — | 2.5G | — | Budget; M variant adds M.2 |
 | **StarTech TB5** | $300 | 140W | 180W | 1 | 1 | 1 | 3 | 2 | 2.5G | — | Most video output types |
@@ -49,15 +49,15 @@ AMD laptops with >100W chargers disconnect from most docks under sustained CPU l
 | **Dell SD25TB5** | $625 | 240W† | 330W | 2 | 1 | 2 | 4 | 2 | 2.5G | — | †300W to Dell; remote management |
 | **iVANKY Ultra** | $650 | 140W | large | 4 | 1 | 1 | 4 | 7 | **10G** | — | 26 ports; Mac-focused |
 
-### Best TB5 Picks
+### Picks
 
-**Best value:** Plugable TBT-UDT3 ($300) — 3x TB5 downstream, 140W PD, 2.5GbE. All you need for USB-C monitors.
+**For >100W laptops (TUXEDO IB Pro 15 etc.):** Lenovo ThinkPad TB5 Smart Dock 7500 ($550) — **180W PD 3.1** (highest among non-Dell docks), HDMI+2xDP for legacy monitors, only dock officially listing Linux support, fwupd firmware updates. Confirmed stable with TUXEDO InfinityBook Pro Gen10 under full CPU load on a single cable. 140W PD 3.1 docks (Plugable, CalDigit TS5) have not been tested with >100W charger laptops — may work but unconfirmed.
 
-**Best for >100W laptops:** Lenovo ThinkPad TB5 Smart Dock 7500 ($550) — 180W PD (highest among non-Dell docks), HDMI+2xDP for legacy monitors, **only dock officially listing Linux support** with fwupd firmware updates. Confirmed stable with TUXEDO InfinityBook Pro Gen10 under full CPU load.
+**For ≤100W laptops:** Plugable TBT-UDT3 ($300) — 3x TB5 downstream (drives USB-C monitors directly), 140W PD 3.1, 2.5GbE.
 
-**Best port count:** CalDigit TS5 Plus ($500) — 10GbE, 10 USB ports total, DP 2.1, 330W adapter. Premium but comprehensive.
+**10GbE:** CalDigit TS5 Plus ($500) — only TB5 dock with 10 GbE, 10 USB ports total, DP 2.1.
 
-**Best with built-in storage:** Satechi CubeDock ($400) or Kensington SD7100T5 ($450) — M.2 NVMe slot for backup / scratch disk.
+**Built-in M.2:** Satechi CubeDock ($400) or Kensington SD7100T5 ($450).
 
 ## Thunderbolt 4 Docks (Still Relevant in 2026)
 
@@ -78,11 +78,11 @@ TB4 docks remain practical — very few laptops have native TB5. For AMD USB4 la
 | **Lenovo 40BE Gen 2** | $360 | 100W | 1 | 1 | 2 | 4 | 2 | 2.5G | Newer; 8K@60Hz |
 | **Dell WD22TB4** | EOL | 90W | 2 | 1 | 2 | 3 | 1 | 1G | EOL; problematic on Linux |
 
-### Best TB4 Picks
+### Picks
 
-**Best for USB-C monitors:** CalDigit TS4 ($330) or OWC TB4 Dock ($230) — 3x TB4 downstream ports drive Apple Studio Display / LG UltraFine directly.
+**USB-C monitors:** CalDigit TS4 ($330) or OWC TB4 Dock ($230) — 3x TB4 downstream ports, drives Apple Studio Display / LG UltraFine directly.
 
-**Best Linux support:** Lenovo 40B0/40BE — official Linux compatibility, fwupd firmware updates. Display-on-resume issues exist but are documented with workarounds.
+**Linux support:** Lenovo 40B0/40BE — official Linux compatibility, fwupd firmware updates. Display-on-resume issues exist but documented with workarounds.
 
 **Avoid:** Dell WD22TB4 (xhci_hcd failures on Linux, EOL), Plugable TBT4-UDZ (no TB4 downstream — cannot drive USB-C monitors).
 
@@ -114,9 +114,9 @@ eGPU docks that also function as laptop docking stations — providing PD chargi
 | **MOREFINE G2** | $1,100 | RTX 5060 Ti 16GB | TB5 + OCuLink | 100W | HDMI, DP, 3xUSB-A | 700g |
 | **ASUS ROG XG Mobile** | $1,300 | RTX 5070 Ti Laptop | TB5 (120 Gbps) | yes | 2xUSB-A, Eth, SD, HDMI, DP, TB5 | 950g |
 
-**Best pick: AORUS RTX 5060 Ti AI BOX ($700)** — desktop RTX 5060 Ti at ~5% perf loss via TB5, comprehensive dock ports (Ethernet, TB5 daisy-chain, multiple USB). Best dock-replacement eGPU.
+**AORUS RTX 5060 Ti AI BOX ($700)** — desktop RTX 5060 Ti at ~5% perf loss via TB5, has Ethernet, TB5 daisy-chain, multiple USB. Closest to a dock replacement.
 
-**Most portable: MOREFINE G2 ($1,100)** — 700g with desktop RTX 5060 Ti, but $400 more than AORUS for fewer ports.
+**MOREFINE G2 ($1,100)** — 700g with desktop RTX 5060 Ti, but $400 more than AORUS for fewer ports.
 
 ### BYO GPU Enclosures with PD
 
@@ -125,7 +125,7 @@ eGPU docks that also function as laptop docking stations — providing PD chargi
 | **Minisforum DEG2** | $240 | TB5 + OCuLink | BYO | 140W | 2xTB5, 2xUSB, 2.5GbE, M.2 |
 | **Sonnet BB 850 T5** | $500 | TB5 | 850W | 100W | 3xUSB-A, 5GbE, TB5 downstream |
 
-**Best value: Minisforum DEG2 ($240 + your PSU)** — TB5, OCuLink, 140W PD, 2.5GbE, M.2 slot. Add a ~$100 SFX PSU for a full dock+eGPU at $340.
+**Minisforum DEG2 ($240 + your PSU)** — TB5, OCuLink, 140W PD 3.1, 2.5GbE, M.2 slot. Add a ~$100 SFX PSU → $340 total for dock+eGPU.
 
 Bare enclosures without PD or dock ports (Razer Core X V2, Minisforum DEG1, AOOSTAR AG03, EXP GDC TH5P4) are not dock replacements — you'd need a separate dock on top.
 
