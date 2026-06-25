@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-25
+
+### Updated
+- TUXEDO InfinityBook Pro 15 — corrected the docking/PD analysis: the 150W charging is a **proprietary 20V/7.5A profile** (outside USB-PD; verified on the TUXEDO product page), not PD 3.1. No dock can supply it, so any dock caps the laptop at **100W**; a 140W/180W PD 3.1 dock only adds voltage stability, not wattage. The rear USB4 port is the sole Thunderbolt port **and** the sole 150W port, while the left USB-C is 100W and not USB4 — so **Thunderbolt docking and 150W charging are mutually exclusive even with two cables.** Removed the earlier "needs a ~$550 140W+ dock for full-power single-cable operation" framing across review, docking overview, excluded-models, summary, and README.
+- TUXEDO InfinityBook Pro 15 docking — added primary-source community reports (r/tuxedocomputers): PD-sensitivity dock resets under load confirmed across multiple docks (Kensington SD5700T, Dell WD22TB4, Belkin/i-tec, TUXEDO Triple Dock; fix = 2nd charger or TDP cap). TUXEDO support confirms 100W ≠ full performance on the **15** (90W), while the **14** (65W) reaches full performance on 100W and runs stable single-cable on a Lenovo TB5 7500. Restored the Lenovo 7500 single-cable stability note with correct attribution (IBP 14, not 15).
+
+### Recommendations
+- Added a selection criterion (README "Key Criteria" + `CLAUDE.md`): require full-power charging over **standard USB-C PD** (SPR ≤100W, or PD 3.1 EPR up to 240W — though most docks cap at 140W) and prefer the charging port to also be USB4/Thunderbolt — avoid proprietary >100W profiles that force a Thunderbolt-vs-full-power trade-off.
+
 ## 2026-06-02
 
 ### Added

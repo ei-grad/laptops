@@ -43,7 +43,7 @@ When adding or updating a review:
 - Cite sources (NotebookCheck, Phoronix, linux-hardware.org)
 - Track thermal/noise data at different power profiles
 - Always include YAML frontmatter in review files (see existing reviews for format)
-- **PD and docking cost:** Laptops with >100W chargers require expensive docks (~$550, e.g. Lenovo ThinkPad TB5 Smart Dock) for stable single-cable operation — standard 100W docks disconnect under CPU load due to PD voltage drops. Note this as a hidden cost in reviews of such laptops and factor it into recommendations. See `overviews/usb4-docking-linux.md` for details
+- **PD and docking cost:** Prefer laptops that charge at full power over **standard USB-C PD** — SPR (≤100W) or PD 3.1 EPR (140/180/240W at 28/36/48V). Note EPR spec reaches 240W but most docks deliver only 140W (180W+ rare: Lenovo 7500 180W, Dell 240W), so >140W laptops still have few dock options. Two failure modes to flag as hidden costs in reviews and weigh in recommendations: (1) standard 100W docks can disconnect under CPU load (PD voltage sag) — a higher-headroom dock (~$550 Lenovo TB5 Smart Dock or a 140W PD 3.1 dock) holds 100W steadier but never exceeds the laptop's negotiated ceiling; (2) **proprietary >100W profiles** (e.g. TUXEDO IB Pro 15's 20V/7.5A 150W, outside USB-PD) cannot be supplied by any dock, so the laptop caps at 100W when docked — and if its only USB4/TB port is also its only high-watt port, Thunderbolt docking and full-power charging are mutually exclusive. See `overviews/usb4-docking-linux.md` for details
 
 ## Consistency Rules
 

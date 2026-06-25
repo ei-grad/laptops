@@ -9,6 +9,7 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 - Sustained clocks: ≥2.8 GHz multi-core, no throttling after heat-soak
 - Noise: <45 dB(A) under load
 - Linux: working out of box or with minor workarounds
+- Charging/docking: full-power charging over **standard USB-C PD** — SPR (≤100W), or PD 3.1 EPR for more (140/180/240W at 28/36/48V) — not a proprietary out-of-spec profile (e.g. 20V/7.5A) that no dock can supply. Note most docks cap at 140W (180W+ rare: Lenovo 7500 180W, Dell 240W), so a >140W laptop still narrows dock choice. Prefer the charging port to also be USB4/Thunderbolt
 
 ## Top Picks (May 2026)
 
@@ -63,7 +64,7 @@ Research notes for selecting a Linux-compatible laptop optimized for sustained m
 
 **Strix Halo is overkill for compilation.** The Ryzen AI Max+ 395's value is its 40-CU iGPU and 256 GB/s unified memory (local LLMs, GPU compute) — wasted on CPU-bound compilation/PySpark. Two reviewed models meet the weight criterion: the HP ZBook Ultra G1a (1.586 kg, Ubuntu-certified, turnkey Linux) and the lighter/cheaper ASUS ProArt PX13 GoPro (1.39 kg, but Linux needs a 7.0 kernel + manual firmware). The rest are heavy/loud gaming or unvalidated on Linux. See [Strix Halo on Linux](overviews/strix-halo-linux.md).
 
-**Laptops with >100W chargers need expensive docks.** Standard 100W USB-C docks disconnect under CPU load due to PD voltage drops. A ThinkPad TB5 Smart Dock (~$550) or similar 140W+ dock is required for stable single-cable operation — factor this into TCO. See [`overviews/usb4-docking-linux.md`](overviews/usb4-docking-linux.md).
+**>100W charging is often a proprietary profile that no dock can supply.** Laptops like the TUXEDO IB Pro 15 charge at 150W only via a non-standard 20V/7.5A profile (outside USB-PD) — on any dock they fall back to 100W, and if their sole USB4 port is also the sole high-watt port, Thunderbolt docking and full-power charging become mutually exclusive. Standard 100W docks can also disconnect under CPU-load transients (PD sag); a higher-headroom dock holds 100W steadier but never exceeds it. Prefer laptops that charge at full power over standard USB-C PD. See [`overviews/usb4-docking-linux.md`](overviews/usb4-docking-linux.md).
 
 ## Sources
 

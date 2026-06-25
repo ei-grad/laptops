@@ -28,6 +28,6 @@
 - Weight 1.77 kg exceeds ≤1.6 kg criterion
 - Same Tongfang GX5 barebone as XMG EVO 15, same HX 370 CPU as the recommended 14" sibling
 - Excellent specs: 90W cooling capacity, 99 Wh battery, 128 GB DDR5 SO-DIMM, native Linux
-- 150W charger exceeds 100W PD ceiling of most docks — requires ~$550 TB5 dock for stable single-cable operation
+- 150W charging uses a proprietary 20V/7.5A profile (outside USB-PD) — no dock supplies it, so any dock caps the laptop at 100W; and its only USB4/TB port is also its only 150W port, so Thunderbolt docking and 150W charging are mutually exclusive (see review)
 - Chosen as a work laptop despite weight exclusion (battery, screen size, cooling headroom)
 - See `reviews/tuxedo-infinitybook-pro-15.md`

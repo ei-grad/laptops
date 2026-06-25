@@ -143,7 +143,7 @@
 | Dell Pro 14 Plus | 1.58 kg | Throttles HX 370 to 25W — CB R23 only 12,684 ([NotebookCheck review](https://www.notebookcheck.net/Finally-embracing-AMD-for-the-pro-series-Dell-Pro-14-Plus-PB14255-laptop-review.1179867.0.html)) |
 | System76 Darter Pro | 1.6 kg | Hot, noisy during compiles ([review notes](reviews/system76-darter-pro.md)) |
 | ThinkPad T14/T14s Gen 7 AMD as HX replacements | 1.09-1.40 kg | They top out at Ryzen AI 7 PRO 450; use P14s Gen 7 for HX PRO 470 ([T14](reviews/lenovo-thinkpad-t14-amd.md), [T14s](reviews/lenovo-thinkpad-t14s.md), [P14s](reviews/lenovo-thinkpad-p14s-amd.md)) |
-| TUXEDO InfinityBook Pro 15 | 1.77 kg | Exceeds ≤1.6 kg criterion; excellent specs (90W cooling, 99 Wh, 128 GB SO-DIMM) but 150W charger exceeds 100W dock PD ceiling — needs ~$550 TB5 dock ([review notes](reviews/tuxedo-infinitybook-pro-15.md)) |
+| TUXEDO InfinityBook Pro 15 | 1.77 kg | Exceeds ≤1.6 kg criterion; excellent specs (90W cooling, 99 Wh, 128 GB SO-DIMM) but 150W charging is a proprietary 20V/7.5A profile no dock can supply — docked = 100W max, and Thunderbolt vs 150W is mutually exclusive (sole USB4 port = sole 150W port) ([review notes](reviews/tuxedo-infinitybook-pro-15.md)) |
 
 ## Intel Options (May 2026 Update)
 

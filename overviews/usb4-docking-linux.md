@@ -19,9 +19,13 @@
 |----------------|-----------------|---------------------|-------|
 | ≤65W (T14, T14s, P14s, EliteBook) | 65W | 65W+ | Most docks work fine |
 | 65-100W (TUXEDO IB Pro 14) | 100W | 100W+ | Standard 100W docks sufficient |
-| >100W (TUXEDO IB Pro 15 — 150W charger) | 140W | 140W+ | Most TB4 docks insufficient; TB5 dock or dual-cable required |
+| >100W via proprietary profile (TUXEDO IB Pro 15 — 20V/7.5A 150W) | 100W | 100W+ with headroom | No dock supplies the non-standard 150W profile — docks cap the laptop at 100W; a 140W+ PD 3.1 dock only adds voltage stability, not wattage. See note below. |
 
 AMD laptops with >100W chargers disconnect from most docks under sustained CPU load due to PD voltage drops. This is not Linux-specific but hits Linux users harder (sustained compilation workloads, no vendor PD policy managers).
+
+**Proprietary >100W profiles are a trap.** Some laptops advertise ">100W USB-C charging" but use a non-standard PD profile — e.g. the TUXEDO InfinityBook Pro 15's **20V/7.5A (150W)**, which is outside the USB-PD spec (PD tops out at 20V/5A = 100W; PD 3.1 EPR goes higher only at 28/36/48V). No dock or third-party charger can supply such a profile, so these laptops fall back to **100W on any dock**. Worse, if the laptop's *only* USB4/Thunderbolt port is also its only high-watt port (as on the IB Pro 15 — rear USB4 is the sole TB port and sole 150W port; the side USB-C is 100W and not TB), then **Thunderbolt docking and full-power charging become mutually exclusive even with two cables.** When buying for single-cable docking, require full-power charging over *standard* USB-C PD — SPR (≤100W) or PD 3.1 EPR (140W/180W/240W at 28/36/48V) — and prefer that all USB-C ports are USB4. (A standards-compliant 150W laptop would use 28V+ EPR; TUXEDO kept 20V and raised current past the 5A connector limit instead.) Caveat: EPR reaches 240W in spec, but most docks deliver only 140W — 180W+ is rare (Lenovo 7500 180W, Dell 240W) — so even a >140W *standard* laptop narrows your dock options.
+
+*Untested edge case:* no dock implements the 20V/7.5A profile (7.5A exceeds the USB-C 5A connector limit — it needs a non-standard cable), so simultaneous **150W charging + an active Thunderbolt data link has never been exercised** on this hardware: the 150W only ever comes from the bundled power-only charger, and data only ever comes from a ≤100W dock. USB-C carries power (VBUS) and USB4 data on independent lines, so there is no protocol reason they couldn't coexist — but even if such a dock were built, it is unverified whether the laptop would request the 150W profile from anything but its bundled charger (proprietary high-current modes are often gated to a charger handshake). Treat 150W+TB as *unproven*, not merely unavailable.
 
 ## Thunderbolt 5 Docks
 
@@ -51,7 +55,7 @@ AMD laptops with >100W chargers disconnect from most docks under sustained CPU l
 
 ### Picks
 
-**For >100W laptops (TUXEDO IB Pro 15 etc.):** Lenovo ThinkPad TB5 Smart Dock 7500 ($550) — **180W PD 3.1** (highest among non-Dell docks), HDMI+2xDP for legacy monitors, only dock officially listing Linux support, fwupd firmware updates. Confirmed stable with TUXEDO InfinityBook Pro Gen10 under full CPU load on a single cable. 140W PD 3.1 docks (Plugable, CalDigit TS5) have not been tested with >100W charger laptops — may work but unconfirmed.
+**For laptops with proprietary >100W profiles (TUXEDO IB Pro 15):** no dock delivers the 150W profile — you are capped at 100W on any dock (see the proprietary-profile note above). Pick a dock with PD headroom well above 100W so its 100W rail doesn't sag under CPU-load transients: the Lenovo ThinkPad TB5 Smart Dock 7500 ($550, 180W PD 3.1, only dock officially listing Linux support, fwupd) or a 140W PD 3.1 dock (Plugable TBT-UDT3, CalDigit TS5). For full 150W you must use the bundled charger directly — and then forgo the Thunderbolt dock entirely, since the IB Pro 15's only USB4 port is also its only 150W port. A user with the **IBP 14 Gen10** (65W) reports the Lenovo 7500 running fully stable single-cable under sustained CPU+GPU load; the **IBP 15** (90W) is *not* confirmed — TUXEDO support says 100W won't reach full performance on the 15 ([r/tuxedocomputers reports](https://www.reddit.com/r/tuxedocomputers/comments/1poqpe3/random_dock_resets_on_infinitybook_pro_14_amd_gen/)).
 
 **For ≤100W laptops:** Plugable TBT-UDT3 ($300) — 3x TB5 downstream (drives USB-C monitors directly), 140W PD 3.1, 2.5GbE.
 
